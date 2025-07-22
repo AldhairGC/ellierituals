@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Ellie Rituals - Santuario de Masajes y Bienestar en Polanco, CDMX</title>
+    <meta name="description" content="Descubre Ellie Rituals, un santuario de bienestar en Polanco, CDMX. Ofrecemos masajes y rituales de lujo diseñados para sostener tu cuerpo y calmar tu mente. Agenda tu experiencia.">
+    <meta name="keywords" content="spa, masajes, bienestar, relajación, Polanco, CDMX, Ellie Rituals, cuidado personal, high ticket, faciales, aromaterapia">
+    <meta name="author" content="Ellie Rituals">
+    <link rel="canonical" href="https://ellierituals.com">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ellierituals.com/">
+    <meta property="og:title" content="Ellie Rituals - Santuario de Masajes y Bienestar en Polanco, CDMX">
+    <meta property="og:description" content="Descubre un espacio de calma y cuidado personal de lujo. Nuestros rituales están diseñados para sostener tu cuerpo y mente.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?q=80&w=1200&auto=format&fit=crop">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ellierituals.com/">
+    <meta property="twitter:title" content="Ellie Rituals - Santuario de Masajes y Bienestar en Polanco, CDMX">
+    <meta property="twitter:description" content="Descubre un espacio de calma y cuidado personal de lujo. Nuestros rituales están diseñados para sostener tu cuerpo y mente.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?q=80&w=1200&auto=format&fit=crop">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Montserrat & Cormorant Garamond for the logo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+
+    <!-- Iconos (Lucide) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --color-dark-green: #344a3a;
+            --color-cream: #f0ebe5;
+            --color-accent: #e9e0d4; /* Lighter accent for subtlety */
+            --color-text-dark: #2c3531;
+            --color-text-light: #f1f1f1;
+        }
+        html {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--color-cream);
+            color: var(--color-text-dark);
+        }
+        body.modal-open {
+            overflow: hidden;
+        }
+        .font-heading {
+            font-weight: 600;
+        }
+        .font-logo {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .header-text-shadow {
+            text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+        }
+        /* Performance optimization */
+        .bg-dark-green { background-color: var(--color-dark-green); }
+        .bg-cream { background-color: var(--color-cream); }
+        .text-dark-green { color: var(--color-dark-green); }
+        .text-cream { color: var(--color-text-light); }
+        .text-accent { color: var(--color-accent); }
+        .border-accent { border-color: var(--color-accent); }
+        
+        /* Optimized animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            will-change: transform, opacity;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+            will-change: auto;
+        }
+        .modal-overlay {
+            transition: opacity 0.4s ease;
+        }
+        .modal-content {
+            transition: transform 0.4s ease, opacity 0.4s ease;
+        }
+        .ritual-card img {
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .ritual-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Logo animation optimized */
+        .logo-hover {
+            transition: transform 0.3s ease;
+        }
+        .logo-hover:hover {
+            transform: scale(1.05);
+        }
+
+        /* Loading optimization */
+        img {
+            loading: lazy;
+        }
+
+        /* Smooth scroll behavior */
+        @media (prefers-reduced-motion: no-preference) {
+            html {
+                scroll-behavior: smooth;
+            }
+        }
+    </style>
+    
+    <!-- JSON-LD Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DaySpa",
+      "name": "Ellie Rituals",
+      "description": "Santuario de bienestar y masajes de lujo en el corazón de Polanco, CDMX. Ofrecemos rituales personalizados para reconectar cuerpo y mente.",
+      "image": "https://images.unsplash.com/photo-1596178065887-1198b6148b2b?q=80&w=1200&auto=format&fit=crop",
+      "url": "https://ellierituals.com",
+      "telephone": "+525629137446",
+      "priceRange": "$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "San Isidro 63 - 101, Reforma Social",
+        "addressLocality": "Miguel Hidalgo",
+        "addressRegion": "CDMX",
+        "postalCode": "11650",
+        "addressCountry": "MX"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 19.435520,
+        "longitude": -99.210418
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "10:00",
+          "closes": "20:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/ellierituals"
+      ]
+    }
+    </script>
+</head>
+<body class="antialiased">
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5215629137446?text=Hola,%20me%20gustaría%20agendar%20una%20sesión%20en%20Ellie%20Rituals." target="_blank" aria-label="Contactar por WhatsApp" class="fixed bottom-6 right-6 bg-green-600 hover:bg-green-700 text-white p-4 rounded-full shadow-2xl z-50 transition-all duration-300 transform hover:scale-110">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"/></svg>
+    </a>
+
+    <!-- Header y Navegación -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-500 bg-transparent">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo integrado en el header -->
+            <a href="#inicio" class="logo-hover">
+                <svg width="80" height="28" viewBox="0 0 120 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="header-text-shadow">
+                    <!-- Arco superior simplificado -->
+                    <path d="M25 15 C25 8 30 8 35 8 L85 8 C90 8 95 8 95 15 L95 25" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" class="text-white"/>
+                    
+                    <!-- Pilares -->
+                    <line x1="25" y1="15" x2="25" y2="25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" class="text-white"/>
+                    <line x1="95" y1="15" x2="95" y2="25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" class="text-white"/>
+                    
+                    <!-- Hoja simplificada -->
+                    <ellipse cx="60" cy="20" rx="3" ry="8" fill="currentColor" class="text-white"/>
+                    <line x1="60" y1="12" x2="60" y2="28" stroke="#344a3a" stroke-width="0.3"/>
+                    
+                    <!-- Texto -->
+                    <text x="60" y="40" font-family="serif" font-size="10" font-weight="700" fill="currentColor" text-anchor="middle" class="text-white" letter-spacing="1px">ELLIE</text>
+                    <text x="60" y="47" font-family="serif" font-size="5" font-weight="400" fill="currentColor" text-anchor="middle" letter-spacing="2px" class="text-white">RITUALS</text>
+                </svg>
+            </a>
+            <nav class="hidden md:flex items-center space-x-10">
+                <a href="#servicios" class="text-white hover:text-accent transition-colors duration-300 header-text-shadow">Rituales</a>
+                <a href="#quienes-somos" class="text-white hover:text-accent transition-colors duration-300 header-text-shadow">Quiénes Somos</a>
+                <a href="#contacto" class="text-white hover:text-accent transition-colors duration-300 header-text-shadow">Contacto</a>
+            </nav>
+            <a href="#contacto" class="hidden md:block bg-transparent border border-accent text-accent px-8 py-2 rounded-full hover:bg-accent hover:text-dark-green transition-all duration-300 header-text-shadow">Agendar Sesión</a>
+            <button id="mobile-menu-button" class="md:hidden text-white" aria-label="Abrir menú"><i data-lucide="menu"></i></button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-green/95 backdrop-blur-md">
+            <a href="#servicios" class="block text-center text-white py-4 hover:bg-accent/10 transition-colors">Rituales</a>
+            <a href="#quienes-somos" class="block text-center text-white py-4 hover:bg-accent/10 transition-colors">Quiénes Somos</a>
+            <a href="#contacto" class="block text-center text-white py-4 hover:bg-accent/10 transition-colors">Contacto</a>
+            <div class="p-4"><a href="#contacto" class="block w-full bg-accent text-dark-green text-center px-6 py-3 rounded-full hover:opacity-90 transition-opacity">Agendar Sesión</a></div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección de Inicio (Hero) -->
+        <section id="inicio" class="h-screen min-h-[700px] bg-dark-green flex flex-col items-center justify-center relative overflow-hidden">
+            <div id="hero-bg" class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('https://images.unsplash.com/photo-1544161515-cfdce9420201?q=80&w=2592&auto=format&fit=crop');"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-green via-dark-green/60 to-transparent"></div>
+            <div class="text-center z-10 p-6 flex flex-col items-center">
+                <!-- Logo principal -->
+                <div class="w-full max-w-[280px] mx-auto mb-8 reveal">
+                    <svg viewBox="0 0 280 320" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
+                        <!-- Arco principal - más redondeado y elegante -->
+                        <path d="M70 60 C70 30 90 30 100 30 L180 30 C190 30 210 30 210 60 L210 120" stroke="#F4E4C1" stroke-width="3" fill="none" stroke-linecap="round"/>
+                        
+                        <!-- Pilares verticales -->
+                        <line x1="70" y1="60" x2="70" y2="120" stroke="#F4E4C1" stroke-width="3" stroke-linecap="round"/>
+                        <line x1="210" y1="60" x2="210" y2="120" stroke="#F4E4C1" stroke-width="3" stroke-linecap="round"/>
+                        
+                        <!-- Hoja más estilizada y detallada -->
+                        <g transform="translate(140,90)" fill="#F4E4C1">
+                            <!-- Forma principal de hoja alargada -->
+                            <ellipse cx="0" cy="0" rx="8" ry="25" fill="#F4E4C1"/>
+                            
+                            <!-- Líneas de vena central -->
+                            <line x1="0" y1="-25" x2="0" y2="25" stroke="#344a3a" stroke-width="0.8"/>
+                            
+                            <!-- Venas laterales izquierdas -->
+                            <path d="M0,-20 Q-6,-15 -8,-8" stroke="#344a3a" stroke-width="0.5" fill="none"/>
+                            <path d="M0,-10 Q-5,-8 -7,-2" stroke="#344a3a" stroke-width="0.5" fill="none"/>
+                            <path d="M0,0 Q-5,2 -6,8" stroke="#344a3a" stroke-width="0.5" fill="none"/>
+                            <path d="M0,10 Q-4,12 -5,18" stroke="#344a3a" stroke-width="0.5" fill="none"/>
+                            
+                            <!-- Venas laterales derechas -->
+                            <path d="M0,-20 Q6,-15 8,-8" stroke="#344a3a" stroke-width="0.5" fill="none"/>
+                            <path d="M0,-10 Q5,-8 7,-2" stroke="#344a3a" stroke-width="0.5" fill="none"/>
+                            <path d="M0,0 Q5,2 6,8" stroke="#344a3a" stroke-width="0.5" fill="none"/>
+                            <path d="M0,10 Q4,12 5,18" stroke="#344a3a" stroke-width="0.5" fill="none"/>
+                        </g>
+                        
+                        <!-- Texto ELLIE - más espaciado -->
+                        <text x="140" y="170" font-family="'Times New Roman', serif" font-size="36" font-weight="700" fill="#F4E4C1" text-anchor="middle" letter-spacing="4px">ELLIE</text>
+                        
+                        <!-- Texto RITUALS - con espaciado específico -->
+                        <text x="140" y="195" font-family="'Times New Roman', serif" font-size="14" font-weight="400" fill="#F4E4C1" text-anchor="middle" letter-spacing="8px">RITUALS</text>
+                        
+                        <!-- Texto inferior con separadores -->
+                        <text x="50" y="250" font-family="Arial, sans-serif" font-size="10" font-weight="300" fill="#F4E4C1" letter-spacing="3px">HUMANIDAD</text>
+                        <text x="140" y="250" font-family="Arial, sans-serif" font-size="10" font-weight="300" fill="#F4E4C1" text-anchor="middle" letter-spacing="3px">MASAJE</text>
+                        <text x="230" y="250" font-family="Arial, sans-serif" font-size="10" font-weight="300" fill="#F4E4C1" text-anchor="end" letter-spacing="3px">SENTIDOS</text>
+                    </svg>
+                </div>
+                <h1 class="text-5xl md:text-6xl font-heading text-white mb-4 reveal font-logo" style="transition-delay: 200ms;">Ellie Rituals</h1>
+                <p class="text-xl md:text-2xl text-accent/90 italic max-w-2xl mx-auto reveal" style="transition-delay: 400ms;">"Tu cuerpo también merece ser sostenido"</p>
+            </div>
+            <div class="absolute bottom-10 z-10 text-white reveal" style="transition-delay: 600ms;">
+                <a href="#servicios" aria-label="Ir a la sección de Rituales">
+                    <i data-lucide="arrow-down" class="w-8 h-8 animate-bounce"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Sección de Rituales -->
+        <section id="servicios" class="py-24 md:py-32 bg-cream">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-20 reveal">
+                    <h2 class="text-4xl md:text-5xl font-heading text-dark-green">Nuestros Rituales</h2>
+                    <p class="mt-6 text-lg max-w-3xl mx-auto text-gray-700">Un viaje por los sentidos que combina humanidad y masaje para una reconexión profunda.</p>
+                </div>
+                <div id="rituals-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    <!-- Ritual Cards will be populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Quiénes Somos -->
+        <section id="quienes-somos" class="py-24 md:py-32 bg-dark-green text-cream">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div class="reveal"><img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?q=80&w=2670&auto=format&fit=crop" alt="Interior elegante y sereno del spa Ellie Rituals" class="rounded-lg shadow-2xl object-cover w-full h-full max-h-[550px]" loading="lazy"></div>
+                    <div class="reveal" style="transition-delay: 200ms;">
+                        <h2 class="text-4xl md:text-5xl font-heading text-white mb-6">El Arte de Sostener</h2>
+                        <p class="text-lg mb-4 text-accent">En Ellie Rituals, creemos que el verdadero bienestar nace de un cuidado consciente y profundo. No somos solo un spa, somos un santuario donde cada detalle está pensado para sostenerte.</p>
+                        <p class="text-lg text-cream/80">Nuestra filosofía se basa en la creación de rituales personalizados que van más allá de un simple tratamiento. Combinamos técnicas ancestrales con un enfoque moderno para ofrecerte una experiencia transformadora que armoniza cuerpo, mente y espíritu.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section id="contacto" class="py-24 md:py-32 bg-cream">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-20 reveal">
+                    <h2 class="text-4xl md:text-5xl font-heading text-dark-green">Agenda tu Ritual</h2>
+                    <p class="mt-6 text-lg max-w-3xl mx-auto text-gray-700">Estamos listas para recibirte. Contáctanos para reservar tu espacio de paz y bienestar.</p>
+                </div>
+                <div class="bg-white p-6 sm:p-8 md:p-12 rounded-lg shadow-xl reveal mb-20">
+                    <div class="grid lg:grid-cols-5 gap-8 lg:gap-12">
+                        <div class="lg:col-span-2">
+                            <h3 class="text-3xl font-heading text-dark-green mb-8">Información</h3>
+                            <div class="space-y-6">
+                                <div class="flex items-start space-x-4"><i data-lucide="map-pin" class="text-dark-green mt-1 flex-shrink-0"></i><div><h4 class="font-semibold text-lg">Dirección</h4><p class="text-gray-600">San Isidro 63 - 101, Reforma Social, M. Hidalgo. Zona Polanco | CDMX</p></div></div>
+                                <div class="flex items-start space-x-4"><i data-lucide="phone" class="text-dark-green mt-1 flex-shrink-0"></i><div><h4 class="font-semibold text-lg">Teléfono y WhatsApp</h4><p class="text-gray-600">56 29 13 74 46</p></div></div>
+                                <div class="flex items-start space-x-4"><i data-lucide="instagram" class="text-dark-green mt-1 flex-shrink-0"></i><div><h4 class="font-semibold text-lg">Instagram</h4><a href="https://www.instagram.com/ellierituals" target="_blank" class="text-gray-600 hover:text-dark-green transition-colors">@ellierituals</a></div></div>
+                                <div class="flex items-start space-x-4"><i data-lucide="clock" class="text-dark-green mt-1 flex-shrink-0"></i><div><h4 class="font-semibold text-lg">Horario</h4><p class="text-gray-600">Lunes a Sábado: 10:00 - 20:00</p><p class="text-gray-600">Domingo: Cerrado</p></div></div>
+                            </div>
+                            <div class="mt-10"><a href="https://wa.me/5215629137446?text=Hola,%20me%20gustaría%20agendar%20una%20sesión%20en%20Ellie%20Rituals." target="_blank" class="w-full text-center bg-dark-green text-white px-10 py-4 rounded-full text-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 inline-block">Contactar por WhatsApp</a></div>
+                        </div>
+                        <div class="w-full h-[300px] lg:h-full rounded-lg overflow-hidden shadow-lg lg:col-span-3"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.464655531924!2d-99.21041882478208!3d19.43552098184519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d201e4a6a5758b%3A0x8e521b3437c3556d!2sC.%20San%20Isidro%2063%2C%20Reforma%20Social%2C%20Miguel%20Hidalgo%2C%2011650%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1721634033285!5m2!1ses-419!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                    </div>
+                </div>
+                
+                <div class="reveal">
+                    <h3 class="text-3xl font-heading text-dark-green text-center mb-10">Nuestro Santuario</h3>
+                    <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <img src="https://images.unsplash.com/photo-1583416750470-3f8f4b7a24c8?q=80&w=2664&auto=format&fit=crop" alt="Recepción del spa con decoración minimalista" class="gallery-image rounded-lg shadow-md w-full h-full object-cover aspect-square cursor-pointer hover:opacity-80 transition-opacity" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1617994392185-927236ab5c53?q=80&w=2574&auto=format&fit=crop" alt="Sala de masaje tranquila y equipada" class="gallery-image rounded-lg shadow-md w-full h-full object-cover aspect-square cursor-pointer hover:opacity-80 transition-opacity" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1552694477-1a1b50a78d45?q=80&w=2670&auto=format&fit=crop" alt="Detalles decorativos naturales en el spa" class="gallery-image rounded-lg shadow-md w-full h-full object-cover aspect-square cursor-pointer hover:opacity-80 transition-opacity" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1617994392182-14d3609655a3?q=80&w=2574&auto=format&fit=crop" alt="Zona de relajación con ambiente sereno" class="gallery-image rounded-lg shadow-md w-full h-full object-cover aspect-square cursor-pointer hover:opacity-80 transition-opacity" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-green text-cream">
+        <div class="container mx-auto px-6 py-10 text-center">
+            <!-- Logo en el footer -->
+            <a href="#inicio" class="logo-hover inline-block mb-6">
+                <svg width="100" height="50" viewBox="0 0 140 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Arco superior -->
+                    <path d="M30 15 C30 8 35 8 40 8 L100 8 C105 8 110 8 110 15 L110 30" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" class="text-white"/>
+                    
+                    <!-- Pilares -->
+                    <line x1="30" y1="15" x2="30" y2="30" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="text-white"/>
+                    <line x1="110" y1="15" x2="110" y2="30" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="text-white"/>
+                    
+                    <!-- Hoja -->
+                    <ellipse cx="70" cy="22" rx="4" ry="12" fill="currentColor" class="text-white"/>
+                    <line x1="70" y1="10" x2="70" y2="34" stroke="#344a3a" stroke-width="0.5"/>
+                    
+                    <!-- Texto -->
+                    <text x="70" y="50" font-family="serif" font-size="12" font-weight="700" fill="currentColor" text-anchor="middle" class="text-white" letter-spacing="1px">ELLIE</text>
+                    <text x="70" y="60" font-family="serif" font-size="6" font-weight="400" fill="currentColor" text-anchor="middle" letter-spacing="2px" class="text-white">RITUALS</text>
+                </svg>
+            </a>
+            <div class="flex justify-center space-x-6 mb-6"><a href="https://www.instagram.com/ellierituals" target="_blank" class="text-cream/70 hover:text-white transition-colors"><i data-lucide="instagram"></i></a></div>
+            <p class="text-cream/70">&copy; <span id="year"></span> ellierituals.com - Todos los derechos reservados.</p>
+            <p class="text-sm text-cream/50 mt-2">Diseño y Desarrollo con 🤍</p>
+        </div>
+    </footer>
+
+    <!-- Rituals Modal -->
+    <div id="ritual-modal" class="modal-overlay fixed inset-0 bg-black bg-opacity-80 z-[60] flex items-center justify-center p-4 hidden opacity-0">
+        <div class="modal-content bg-white w-full max-w-4xl max-h-[90vh] rounded-lg shadow-2xl flex flex-col opacity-0 transform scale-95">
+            <button class="close-modal-btn absolute top-4 right-4 bg-white/80 text-gray-800 rounded-full p-2 hover:bg-white transition-colors z-10" aria-label="Cerrar modal"><i data-lucide="x"></i></button>
+            <div class="flex-grow overflow-y-auto">
+                <div class="grid md:grid-cols-2">
+                    <div class="relative"><img id="modal-ritual-img" src="" alt="Detalle del ritual" class="w-full h-full object-cover md:rounded-l-lg min-h-[250px] md:min-h-0"></div>
+                    <div class="p-6 md:p-8">
+                        <h3 id="modal-ritual-title" class="text-3xl md:text-4xl font-heading text-dark-green mb-4"></h3>
+                        <p id="modal-ritual-desc" class="text-gray-600 leading-relaxed mb-6"></p>
+                        <h4 class="text-2xl font-heading text-dark-green mb-4 border-b pb-2">Detalles Clave</h4>
+                        <div id="modal-ritual-details" class="space-y-4 text-gray-700"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Gallery Modal -->
+    <div id="gallery-modal" class="modal-overlay fixed inset-0 bg-black bg-opacity-90 z-[70] flex items-center justify-center p-4 hidden opacity-0">
+        <button class="close-modal-btn absolute top-6 right-6 text-white/80 hover:text-white transition-colors z-10" aria-label="Cerrar imagen"><i data-lucide="x" class="w-10 h-10"></i></button>
+        <div class="modal-content w-full h-full flex items-center justify-center opacity-0 transform scale-95">
+            <img id="modal-gallery-img" src="" alt="Vista ampliada de nuestro santuario" class="max-w-[90vw] max-h-[90vh] object-contain rounded-lg shadow-2xl">
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            lucide.createIcons();
+
+            // --- Mobile Menu Logic ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            document.querySelectorAll('#mobile-menu a').forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+            // --- Header Scroll Effect ---
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                const isScrolled = window.scrollY > 50;
+                header.classList.toggle('bg-dark-green/90', isScrolled);
+                header.classList.toggle('backdrop-blur-md', isScrolled);
+                header.classList.toggle('shadow-lg', isScrolled);
+                header.classList.toggle('bg-transparent', !isScrolled);
+            });
+            
+            // --- Parallax Effect on Hero ---
+            const heroBg = document.getElementById('hero-bg');
+            window.addEventListener('scroll', () => {
+                const offset = window.pageYOffset;
+                if (window.innerWidth > 768) { // Apply only on desktop
+                    heroBg.style.transform = `translateY(${offset * 0.3}px)`;
+                }
+            });
+
+            // --- Reveal on Scroll Animation ---
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+            // --- Rituals Data & Rendering ---
+            const rituals = [
+                { title: "Renovación Profunda", img: "https://images.unsplash.com/photo-1519823551264-9949feff5358?q=80&w=2574&auto=format&fit=crop", desc: "Una combinación experta de masaje descontracturante y aromaterapia. Diseñado para disolver nudos de tensión, liberar el estrés acumulado y revitalizar tu energía vital.", duration: "90 min", focus: "Relajación y Descontracturante", products: "Aceites Esenciales Puros", cost: "Consultar", alt: "Mujer recibiendo un masaje de espalda con aceites" },
+                { title: "Facial Luminoso", img: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=2592&auto=format&fit=crop", desc: "Un tratamiento holístico que utiliza productos orgánicos para limpiar, nutrir e hidratar. Un masaje facial estimula la circulación y devuelve la vitalidad natural a tu piel.", duration: "60 min", focus: "Hidratación y Luminosidad", products: "Cosmética Orgánica", cost: "Consultar", alt: "Aplicación de una mascarilla facial a una mujer" },
+                { title: "Calma Absoluta", img: "https://images.unsplash.com/photo-1512290923902-8a9f31c83659?q=80&w=2670&auto=format&fit=crop", desc: "Sumérgete en paz total con este masaje relajante. El calor de las piedras volcánicas penetra en los músculos mientras los aceites esenciales calman tu sistema nervioso.", duration: "120 min", focus: "Relajación Profunda", products: "Piedras Volcánicas", cost: "Consultar", alt: "Piedras de masaje calientes sobre la espalda de una persona" },
+                { title: "Energía Cítrica", img: "https://images.unsplash.com/photo-1600334089648-b0d9d3028269?q=80&w=2574&auto=format&fit=crop", desc: "Despierta tus sentidos con este tratamiento revitalizante. Una exfoliación suave con sales y cítricos, seguida de un masaje enérgico para estimular la circulación y recargar tu energía.", duration: "75 min", focus: "Energizante y Tonificante", products: "Exfoliantes Cítricos", cost: "Consultar", alt: "Tazón con ingredientes cítricos para exfoliación" },
+                { title: "Tierra y Raíces", img: "https://images.unsplash.com/photo-1616332353323-27515b6a716a?q=80&w=2574&auto=format&fit=crop", desc: "Conéctate con la tierra a través de este masaje de presión profunda enfocado en pies, piernas y espalda. Utilizamos técnicas de reflexología y aceites amaderados para anclarte.", duration: "90 min", focus: "Anclaje y Liberación", products: "Aceites Amaderados", cost: "Consultar", alt: "Masaje de pies enfocado en reflexología" },
+                { title: "Serenidad Craneal", img: "https://images.unsplash.com/photo-1604523450325-1a4cf4a1d2f2?q=80&w=2574&auto=format&fit=crop", desc: "Un masaje enfocado en cabeza, cuello y hombros para aliviar migrañas, fatiga visual y estrés mental. Un bálsamo para una mente sobrecargada.", duration: "45 min", focus: "Alivio Mental y Tensión", products: "Aromaterapia de Lavanda", cost: "Consultar", alt: "Mujer disfrutando de un masaje en la cabeza" },
+            ];
+
+            const ritualsContainer = document.getElementById('rituals-grid');
+            rituals.forEach((ritual, index) => {
+                const card = document.createElement('article');
+                card.className = 'ritual-card bg-white rounded-lg shadow-lg overflow-hidden group reveal cursor-pointer';
+                card.style.transitionDelay = `${index * 100}ms`;
+                card.innerHTML = `
+                    <div class="overflow-hidden rounded-t-lg">
+                        <img src="${ritual.img}" alt="${ritual.alt}" class="w-full h-56 object-cover" loading="lazy">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-heading text-dark-green mb-2">${ritual.title}</h3>
+                        <span class="font-semibold text-dark-green/80 block mb-4">${ritual.duration}</span>
+                        <span class="text-dark-green font-semibold inline-block border-b-2 border-transparent group-hover:border-dark-green transition-all duration-300">Ver más →</span>
+                    </div>
+                `;
+                card.addEventListener('click', () => openRitualModal(ritual));
+                ritualsContainer.appendChild(card);
+                revealObserver.observe(card);
+            });
+
+            // --- Modal Logic ---
+            const ritualModal = document.getElementById('ritual-modal');
+            const galleryModal = document.getElementById('gallery-modal');
+
+            function openRitualModal(ritualData) {
+                document.getElementById('modal-ritual-img').src = ritualData.img;
+                document.getElementById('modal-ritual-img').alt = ritualData.alt;
+                document.getElementById('modal-ritual-title').textContent = ritualData.title;
+                document.getElementById('modal-ritual-desc').textContent = ritualData.desc;
+                document.getElementById('modal-ritual-details').innerHTML = `
+                    <div class="flex items-start space-x-3"><i data-lucide="clock" class="w-5 h-5 mt-1 text-dark-green flex-shrink-0"></i><div><strong>Duración:</strong> ${ritualData.duration}</div></div>
+                    <div class="flex items-start space-x-3"><i data-lucide="target" class="w-5 h-5 mt-1 text-dark-green flex-shrink-0"></i><div><strong>Enfoque:</strong> ${ritualData.focus}</div></div>
+                    <div class="flex items-start space-x-3"><i data-lucide="leaf" class="w-5 h-5 mt-1 text-dark-green flex-shrink-0"></i><div><strong>Productos:</strong> ${ritualData.products}</div></div>
+                    <div class="flex items-start space-x-3"><i data-lucide="dollar-sign" class="w-5 h-5 mt-1 text-dark-green flex-shrink-0"></i><div><strong>Costo:</strong> ${ritualData.cost}</div></div>
+                `;
+                lucide.createIcons();
+                showModal(ritualModal);
+            }
+            
+            document.querySelectorAll('.gallery-image').forEach(img => {
+                img.addEventListener('click', () => {
+                    document.getElementById('modal-gallery-img').src = img.src;
+                    showModal(galleryModal);
+                });
+            });
+
+            function showModal(modalElement) {
+                modalElement.classList.remove('hidden');
+                document.body.classList.add('modal-open');
+                setTimeout(() => {
+                    modalElement.classList.remove('opacity-0');
+                    modalElement.querySelector('.modal-content').classList.remove('opacity-0', 'scale-95');
+                }, 10);
+            }
+
+            function closeModal(modalElement) {
+                modalElement.classList.add('opacity-0');
+                modalElement.querySelector('.modal-content').classList.add('opacity-0', 'scale-95');
+                setTimeout(() => {
+                    modalElement.classList.add('hidden');
+                    if (!document.querySelector('.modal-overlay:not(.hidden)')) {
+                        document.body.classList.remove('modal-open');
+                    }
+                }, 400);
+            }
+
+            document.querySelectorAll('.close-modal-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    closeModal(btn.closest('.modal-overlay'));
+                });
+            });
+            
+            document.querySelectorAll('.modal-overlay').forEach(overlay => {
+                overlay.addEventListener('click', (e) => { 
+                    if (e.target === overlay) closeModal(overlay); 
+                });
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === "Escape") {
+                    document.querySelectorAll('.modal-overlay:not(.hidden)').forEach(closeModal);
+                }
+            });
+
+            // --- Footer Year ---
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+
+</body>
+</html>
