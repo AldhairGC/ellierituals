@@ -11,41 +11,96 @@
     <meta name="author" content="Ellie Rituals">
     <link rel="canonical" href="https://ellierituals.com">
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph / Facebook - Optimizado -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ellierituals.com/">
+    <meta property="og:site_name" content="Ellie Rituals">
     <meta property="og:title" content="Ellie Rituals - Santuario de Masajes y Bienestar en Polanco, CDMX">
-    <meta property="og:description" content="Descubre un espacio de calma y cuidado personal de lujo. Nuestros rituales están diseñados para sostener tu cuerpo y mente.">
+    <meta property="og:description" content="✨ Tu cuerpo también merece ser sostenido. Rituales de bienestar elevado con medicina natural y energética en el corazón de Polanco. Reserva tu experiencia.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?q=80&w=1200&auto=format&fit=crop">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Espacio sereno de Ellie Rituals - Santuario de bienestar en Polanco">
+    <meta property="og:locale" content="es_MX">
+    <meta property="fb:app_id" content=""><!-- Agregar cuando tengas Facebook App -->
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://ellierituals.com/">
-    <meta property="twitter:title" content="Ellie Rituals - Santuario de Masajes y Bienestar en Polanco, CDMX">
-    <meta property="twitter:description" content="Descubre un espacio de calma y cuidado personal de lujo. Nuestros rituales están diseñados para sostener tu cuerpo y mente.">
-    <meta property="twitter:image" content="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?q=80&w=1200&auto=format&fit=crop">
+    <!-- Twitter Card - Optimizado -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://ellierituals.com/">
+    <meta name="twitter:site" content="@ellierituals">
+    <meta name="twitter:creator" content="@ellierituals">
+    <meta name="twitter:title" content="Ellie Rituals - Santuario de Masajes y Bienestar">
+    <meta name="twitter:description" content="✨ Tu cuerpo también merece ser sostenido. Rituales de bienestar elevado en Polanco, CDMX. Masajes, faciales y medicina energética.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?q=80&w=1200&auto=format&fit=crop">
+    <meta name="twitter:image:alt" content="Espacio sereno de Ellie Rituals">
+
+    <!-- WhatsApp Preview Optimization -->
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:secure_url" content="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?q=80&w=1200&auto=format&fit=crop">
+    
+    <!-- Instagram / LinkedIn -->
+    <meta property="article:publisher" content="https://www.instagram.com/ellierituals">
+    <meta property="article:author" content="Ellie Rituals">
+
+    <!-- Google Analytics 4 - REEMPLAZA G-XXXXXXXXXX CON TU ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+        
+        // Custom events para conversiones
+        function trackWhatsAppClick(ritual = 'General') {
+            gtag('event', 'whatsapp_click', {
+                'event_category': 'Contact',
+                'event_label': ritual,
+                'value': 1
+            });
+        }
+        
+        function trackRitualView(ritualName) {
+            gtag('event', 'ritual_view', {
+                'event_category': 'Engagement',
+                'event_label': ritualName,
+                'value': 1
+            });
+        }
+    </script>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Montserrat & Cormorant Garamond for the logo -->
+    <!-- Preconnect para recursos externos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    
+    <!-- Google Fonts: Montserrat & Cormorant Garamond optimizados -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
     
+    <!-- Preload hero image -->
+    <link rel="preload" as="image" href="https://i.ibb.co/dJcXK5VV/Whats-App-Image-2025-07-22-at-03-05-56.jpg" fetchpriority="high">
+    
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none'%3E%3Crect width='100' height='100' fill='%23344a3a'/%3E%3Cpath d='M25 30 C25 20 30 20 35 20 L65 20 C70 20 75 20 75 30 L75 50' stroke='%23F4E4C1' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3Cline x1='25' y1='30' x2='25' y2='50' stroke='%23F4E4C1' stroke-width='3' stroke-linecap='round'/%3E%3Cline x1='75' y1='30' x2='75' y2='50' stroke='%23F4E4C1' stroke-width='3' stroke-linecap='round'/%3E%3Cellipse cx='50' cy='38' rx='6' ry='16' fill='%23F4E4C1'/%3E%3Cline x1='50' y1='22' x2='50' y2='54' stroke='%23344a3a' stroke-width='1'/%3E%3Ctext x='50' y='75' font-family='serif' font-size='18' font-weight='700' fill='%23F4E4C1' text-anchor='middle' letter-spacing='1'%3EER%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180' fill='none'%3E%3Crect width='180' height='180' fill='%23344a3a' rx='20'/%3E%3Cpath d='M50 60 C50 45 55 45 65 45 L115 45 C125 45 130 45 130 60 L130 90' stroke='%23F4E4C1' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3Cline x1='50' y1='60' x2='50' y2='90' stroke='%23F4E4C1' stroke-width='5' stroke-linecap='round'/%3E%3Cline x1='130' y1='60' x2='130' y2='90' stroke='%23F4E4C1' stroke-width='5' stroke-linecap='round'/%3E%3Cellipse cx='90' cy='73' rx='10' ry='28' fill='%23F4E4C1'/%3E%3Cline x1='90' y1='45' x2='90' y2='101' stroke='%23344a3a' stroke-width='1.5'/%3E%3Ctext x='90' y='135' font-family='serif' font-size='32' font-weight='700' fill='%23F4E4C1' text-anchor='middle' letter-spacing='2'%3EER%3C/text%3E%3C/svg%3E">
 
-    <!-- Iconos (Lucide) -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Iconos (Lucide) - Defer para mejor performance -->
+    <script src="https://unpkg.com/lucide@latest" defer></script>
 
     <style>
         :root {
             --color-dark-green: #344a3a;
             --color-cream: #f0ebe5;
-            --color-accent: #e9e0d4; /* Lighter accent for subtlety */
+            --color-accent: #d4c5b3; /* Mejor contraste */
+            --color-accent-dark: #b8a088; /* Para textos que necesitan más contraste */
             --color-text-dark: #2c3531;
             --color-text-light: #f1f1f1;
+            --color-cta-primary: #344a3a;
+            --color-cta-secondary: #d4c5b3;
         }
         html {
             -webkit-font-smoothing: antialiased;
@@ -109,15 +164,256 @@
             transform: scale(1.05);
         }
 
-        /* Loading optimization */
+        /* Image optimization */
         img {
-            loading: lazy;
+            content-visibility: auto;
+        }
+        
+        /* Reduce layout shift */
+        .ritual-card img, .gallery-image {
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+
+        /* Accessibility - Focus visible */
+        *:focus {
+            outline: 2px solid var(--color-accent-dark);
+            outline-offset: 2px;
+        }
+        
+        *:focus:not(:focus-visible) {
+            outline: none;
+        }
+        
+        *:focus-visible {
+            outline: 2px solid var(--color-accent-dark);
+            outline-offset: 2px;
+        }
+
+        /* Skip to content link */
+        .skip-to-content {
+            position: absolute;
+            top: -100px;
+            left: 0;
+            background: var(--color-dark-green);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            z-index: 100;
+            transition: top 0.3s;
+        }
+        .skip-to-content:focus {
+            top: 0;
         }
 
         /* Smooth scroll behavior */
         @media (prefers-reduced-motion: no-preference) {
             html {
                 scroll-behavior: smooth;
+            }
+        }
+
+        /* Mejoras de CTAs */
+        .btn-primary {
+            background-color: var(--color-cta-primary);
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-align: center;
+            border: 2px solid var(--color-cta-primary);
+        }
+        .btn-primary:hover {
+            background-color: #2a3c2f;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(52, 74, 58, 0.3);
+        }
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--color-cta-primary);
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-align: center;
+            border: 2px solid var(--color-cta-primary);
+        }
+        .btn-secondary:hover {
+            background-color: var(--color-cta-primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(52, 74, 58, 0.2);
+        }
+        
+        .btn-outline-light {
+            background-color: transparent;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-align: center;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+        .btn-outline-light:hover {
+            background-color: white;
+            color: var(--color-cta-primary);
+            border-color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Sticky CTA flotante */
+        .sticky-cta {
+            position: fixed;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%) translateY(150%);
+            z-index: 45;
+            transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+        .sticky-cta.visible {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* Active navigation link */
+        .active-nav {
+            color: var(--color-accent-dark) !important;
+            font-weight: 600;
+            position: relative;
+        }
+        .active-nav::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: var(--color-accent-dark);
+        }
+        
+        /* Progress bar styling */
+        #progress-bar {
+            box-shadow: 0 0 10px rgba(212, 197, 179, 0.5);
+        }
+
+        /* Mejor contraste en textos */
+        .text-accent-dark {
+            color: var(--color-accent-dark);
+        }
+
+        /* Loading Spinner */
+        .loading-spinner {
+            border: 3px solid rgba(52, 74, 58, 0.1);
+            border-top: 3px solid var(--color-dark-green);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Toast notification */
+        .toast {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            background-color: var(--color-dark-green);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transform: translateX(400px);
+            transition: transform 0.3s ease;
+            z-index: 100;
+        }
+        .toast.show {
+            transform: translateX(0);
+        }
+        .toast.success {
+            background-color: #2d5f3f;
+        }
+        .toast.error {
+            background-color: #8b3a3a;
+        }
+
+        /* Image loading skeleton */
+        .image-loading {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s ease-in-out infinite;
+        }
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* Optimización Mobile - Touch Targets */
+        @media (max-width: 768px) {
+            .btn-primary, .btn-secondary, .btn-outline-light {
+                padding: 1rem 2rem;
+                min-height: 48px;
+                font-size: 1rem;
+            }
+            
+            /* Menú mobile más espacioso */
+            #mobile-menu a {
+                padding: 1.25rem 1rem;
+                min-height: 56px;
+                font-size: 1.125rem;
+            }
+            
+            /* Botón menú hamburguesa más grande */
+            #mobile-menu-button {
+                padding: 0.75rem;
+                min-width: 48px;
+                min-height: 48px;
+            }
+            
+            /* Links en mobile más grandes */
+            a[href^="#"] {
+                min-height: 44px;
+                display: inline-flex;
+                align-items: center;
+            }
+            
+            /* WhatsApp flotante más grande en mobile */
+            .fixed.bottom-6.right-6 {
+                padding: 1.25rem;
+                width: 64px;
+                height: 64px;
+            }
+            
+            /* FAQ buttons más grandes */
+            .faq-question {
+                padding: 1.25rem 1.5rem !important;
+                min-height: 60px;
+            }
+            
+            /* Gallery images con mejor spacing */
+            #gallery-grid {
+                gap: 0.75rem;
+            }
+            
+            /* Ritual cards con mejor padding */
+            .ritual-card .p-8 {
+                padding: 1.5rem;
+            }
+            
+            /* Espaciado mejorado entre botones */
+            .ritual-card button, .ritual-card a {
+                margin-bottom: 0.75rem;
             }
         }
     </style>
@@ -163,19 +459,129 @@
       ],
       "sameAs": [
         "https://www.instagram.com/ellierituals"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Rituales de Bienestar",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Renovación Profunda",
+              "description": "Masaje descontracturante con aromaterapia para disolver tensión y revitalizar energía",
+              "provider": {
+                "@type": "DaySpa",
+                "name": "Ellie Rituals"
+              }
+            },
+            "price": "1800",
+            "priceCurrency": "MXN"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Facial Luminoso",
+              "description": "Tratamiento facial holístico con productos orgánicos",
+              "provider": {
+                "@type": "DaySpa",
+                "name": "Ellie Rituals"
+              }
+            },
+            "price": "1200",
+            "priceCurrency": "MXN"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Calma Absoluta",
+              "description": "Masaje relajante con piedras volcánicas",
+              "provider": {
+                "@type": "DaySpa",
+                "name": "Ellie Rituals"
+              }
+            },
+            "price": "2200",
+            "priceCurrency": "MXN"
+          }
+        ]
+      }
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Necesito traer algo a mi sesión?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No necesitas traer nada. Te proporcionamos todo lo necesario: toallas, batas, y productos de primera calidad."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Con cuánta anticipación debo agendar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Recomendamos agendar con al menos 48 horas de anticipación para asegurar tu espacio preferido."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la política de cancelación?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Puedes cancelar o reagendar sin costo hasta 24 horas antes de tu cita. Cancelaciones con menos de 24 horas tienen un cargo del 50%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué formas de pago aceptan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aceptamos efectivo, tarjetas de crédito y débito (Visa, Mastercard, American Express), y transferencias bancarias."
+          }
+        }
       ]
     }
     </script>
 </head>
 <body class="antialiased">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-to-content">Saltar al contenido principal</a>
 
     <!-- Botón flotante de WhatsApp -->
-    <a href="https://wa.me/5215629137446?text=Hola,%20me%20gustaría%20agendar%20una%20sesión%20en%20Ellie%20Rituals." target="_blank" aria-label="Contactar por WhatsApp" class="fixed bottom-6 right-6 bg-green-600 hover:bg-green-700 text-white p-4 rounded-full shadow-2xl z-50 transition-all duration-300 transform hover:scale-110">
+    <a href="https://wa.me/5215629137446?text=Hola,%20me%20gustaría%20agendar%20una%20sesión%20en%20Ellie%20Rituals." target="_blank" aria-label="Contactar por WhatsApp" onclick="if(typeof trackWhatsAppClick === 'function') trackWhatsAppClick('Flotante');" class="fixed bottom-6 right-6 bg-green-600 hover:bg-green-700 text-white p-4 rounded-full shadow-2xl z-50 transition-all duration-300 transform hover:scale-110">
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"/></svg>
     </a>
 
+    <!-- Sticky CTA flotante -->
+    <div id="sticky-cta" class="sticky-cta hidden md:block">
+        <a href="#contacto" class="btn-primary text-lg px-10 py-4 shadow-2xl">
+            Agendar Mi Ritual
+        </a>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <div class="flex items-center">
+            <i data-lucide="check-circle" class="w-5 h-5 mr-3"></i>
+            <span id="toast-message">Mensaje</span>
+        </div>
+    </div>
+
+    <!-- Barra de progreso -->
+    <div id="progress-bar" class="fixed top-0 left-0 h-1 bg-accent z-50 transition-all duration-300" style="width: 0%"></div>
+
     <!-- Header y Navegación -->
-    <header id="header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-500 bg-transparent">
+    <header id="header" role="banner" class="fixed top-0 left-0 right-0 z-40 transition-all duration-500 bg-transparent" style="padding-top: 1px;">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <!-- Logo integrado en el header -->
             <a href="#inicio" class="logo-hover">
@@ -196,23 +602,23 @@
                     <text x="60" y="47" font-family="serif" font-size="5" font-weight="400" fill="currentColor" text-anchor="middle" letter-spacing="2px" class="text-white">RITUALS</text>
                 </svg>
             </a>
-            <nav class="hidden md:flex items-center space-x-10">
-                <a href="#servicios" class="text-white hover:text-accent transition-colors duration-300 header-text-shadow">Rituales</a>
-                <a href="#quienes-somos" class="text-white hover:text-accent transition-colors duration-300 header-text-shadow">Quiénes Somos</a>
-                <a href="#contacto" class="text-white hover:text-accent transition-colors duration-300 header-text-shadow">Contacto</a>
+            <nav role="navigation" aria-label="Menú principal" class="hidden md:flex items-center space-x-10">
+                <a href="#servicios" class="text-white hover:text-accent-dark transition-colors duration-300 header-text-shadow">Rituales</a>
+                <a href="#quienes-somos" class="text-white hover:text-accent-dark transition-colors duration-300 header-text-shadow">Quiénes Somos</a>
+                <a href="#contacto" class="text-white hover:text-accent-dark transition-colors duration-300 header-text-shadow">Contacto</a>
             </nav>
-            <a href="#contacto" class="hidden md:block bg-transparent border border-accent text-accent px-8 py-2 rounded-full hover:bg-accent hover:text-dark-green transition-all duration-300 header-text-shadow">Agendar Sesión</a>
+            <a href="#contacto" class="hidden md:block btn-outline-light">Agendar Sesión</a>
             <button id="mobile-menu-button" class="md:hidden text-white" aria-label="Abrir menú"><i data-lucide="menu"></i></button>
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-dark-green/95 backdrop-blur-md">
-            <a href="#servicios" class="block text-center text-white py-4 hover:bg-accent/10 transition-colors">Rituales</a>
-            <a href="#quienes-somos" class="block text-center text-white py-4 hover:bg-accent/10 transition-colors">Quiénes Somos</a>
-            <a href="#contacto" class="block text-center text-white py-4 hover:bg-accent/10 transition-colors">Contacto</a>
-            <div class="p-4"><a href="#contacto" class="block w-full bg-accent text-dark-green text-center px-6 py-3 rounded-full hover:opacity-90 transition-opacity">Agendar Sesión</a></div>
+            <a href="#servicios" class="block text-center text-white py-4 hover:bg-white/10 transition-colors">Rituales</a>
+            <a href="#quienes-somos" class="block text-center text-white py-4 hover:bg-white/10 transition-colors">Quiénes Somos</a>
+            <a href="#contacto" class="block text-center text-white py-4 hover:bg-white/10 transition-colors">Contacto</a>
+            <div class="p-4"><a href="#contacto" class="btn-primary block w-full">Agendar Sesión</a></div>
         </div>
     </header>
 
-    <main>
+    <main id="main-content" role="main">
         <!-- Sección de Inicio (Hero) -->
         <section id="inicio" class="h-screen min-h-[700px] bg-dark-green flex flex-col items-center justify-center relative overflow-hidden">
             <div id="hero-bg" class="absolute inset-0 bg-cover bg-center opacity-25" style="background-image: url('https://i.ibb.co/dJcXK5VV/Whats-App-Image-2025-07-22-at-03-05-56.jpg');"></div>
@@ -262,7 +668,7 @@
                     </svg>
                 </div>
                 <h1 class="text-5xl md:text-6xl font-heading text-white mb-4 reveal font-logo" style="transition-delay: 200ms;">Ellie Rituals</h1>
-                <p class="text-xl md:text-2xl text-accent/90 italic max-w-2xl mx-auto reveal" style="transition-delay: 400ms;">"Tu cuerpo también merece ser sostenido"</p>
+                <p class="text-xl md:text-2xl text-accent-dark italic max-w-2xl mx-auto reveal" style="transition-delay: 400ms;">"Tu cuerpo también merece ser sostenido"</p>
             </div>
             <div class="absolute bottom-10 z-10 text-white reveal" style="transition-delay: 600ms;">
                 <a href="#servicios" aria-label="Ir a la sección de Rituales">
@@ -284,41 +690,176 @@
             </div>
         </section>
 
+        <!-- Sección de Testimonios -->
+        <section id="testimonios" class="py-24 md:py-32 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-4xl md:text-5xl font-heading text-dark-green mb-4">Voces de Transformación</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Lo que nuestras clientas dicen sobre su experiencia en Ellie Rituals</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Testimonio 1 -->
+                    <div class="bg-cream p-8 rounded-lg shadow-md reveal relative">
+                        <div class="text-5xl text-dark-green/20 absolute top-4 left-4">"</div>
+                        <div class="relative z-10">
+                            <p class="text-gray-700 leading-relaxed mb-6 italic mt-8">"Una experiencia transformadora. No solo salí relajada, salí renovada desde dentro. El trato es excepcional y el espacio es un verdadero santuario."</p>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-dark-green rounded-full flex items-center justify-center text-white font-bold mr-4">MC</div>
+                                <div>
+                                    <p class="font-semibold text-dark-green">María Camila</p>
+                                    <p class="text-sm text-gray-600">Calma Absoluta</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonio 2 -->
+                    <div class="bg-cream p-8 rounded-lg shadow-md reveal relative" style="transition-delay: 100ms;">
+                        <div class="text-5xl text-dark-green/20 absolute top-4 left-4">"</div>
+                        <div class="relative z-10">
+                            <p class="text-gray-700 leading-relaxed mb-6 italic mt-8">"Llevo años probando spas y nunca había sentido algo tan profundo. La atención al detalle y el cuidado personalizado hacen toda la diferencia."</p>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-dark-green rounded-full flex items-center justify-center text-white font-bold mr-4">SF</div>
+                                <div>
+                                    <p class="font-semibold text-dark-green">Sofía Fernández</p>
+                                    <p class="text-sm text-gray-600">Renovación Profunda</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonio 3 -->
+                    <div class="bg-cream p-8 rounded-lg shadow-md reveal relative" style="transition-delay: 200ms;">
+                        <div class="text-5xl text-dark-green/20 absolute top-4 left-4">"</div>
+                        <div class="relative z-10">
+                            <p class="text-gray-700 leading-relaxed mb-6 italic mt-8">"El facial luminoso superó todas mis expectativas. Mi piel se ve increíble y me sentí completamente consentida. Definitivamente regreso."</p>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-dark-green rounded-full flex items-center justify-center text-white font-bold mr-4">AL</div>
+                                <div>
+                                    <p class="font-semibold text-dark-green">Ana Lucía</p>
+                                    <p class="text-sm text-gray-600">Facial Luminoso</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonio 4 -->
+                    <div class="bg-cream p-8 rounded-lg shadow-md reveal relative" style="transition-delay: 300ms;">
+                        <div class="text-5xl text-dark-green/20 absolute top-4 left-4">"</div>
+                        <div class="relative z-10">
+                            <p class="text-gray-700 leading-relaxed mb-6 italic mt-8">"Sufro de migrañas constantes y la Serenidad Craneal me cambió la vida. Salgo sintiendo que mi mente se resetea completamente."</p>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-dark-green rounded-full flex items-center justify-center text-white font-bold mr-4">PG</div>
+                                <div>
+                                    <p class="font-semibold text-dark-green">Paula González</p>
+                                    <p class="text-sm text-gray-600">Serenidad Craneal</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonio 5 -->
+                    <div class="bg-cream p-8 rounded-lg shadow-md reveal relative" style="transition-delay: 400ms;">
+                        <div class="text-5xl text-dark-green/20 absolute top-4 left-4">"</div>
+                        <div class="relative z-10">
+                            <p class="text-gray-700 leading-relaxed mb-6 italic mt-8">"La energía del lugar es mágica. Cada detalle está pensado para tu bienestar. Es mi escape mensual y no lo cambio por nada."</p>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-dark-green rounded-full flex items-center justify-center text-white font-bold mr-4">VR</div>
+                                <div>
+                                    <p class="font-semibold text-dark-green">Valeria Ríos</p>
+                                    <p class="text-sm text-gray-600">Tierra y Raíces</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonio 6 -->
+                    <div class="bg-cream p-8 rounded-lg shadow-md reveal relative" style="transition-delay: 500ms;">
+                        <div class="text-5xl text-dark-green/20 absolute top-4 left-4">"</div>
+                        <div class="relative z-10">
+                            <p class="text-gray-700 leading-relaxed mb-6 italic mt-8">"Regalé un ritual a mi mamá y quedó encantada. Ahora venimos juntas. Es el mejor regalo que puedes dar: tiempo de calidad y autocuidado."</p>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-dark-green rounded-full flex items-center justify-center text-white font-bold mr-4">DM</div>
+                                <div>
+                                    <p class="font-semibold text-dark-green">Diana Moreno</p>
+                                    <p class="text-sm text-gray-600">Energía Cítrica</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Sección Quiénes Somos -->
         <section id="quienes-somos" class="py-24 md:py-32 bg-dark-green text-cream">
             <div class="container mx-auto px-6">
                 <div class="grid md:grid-cols-2 gap-16 items-center">
                     <div class="reveal"><img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=2575&auto=format&fit=crop" alt="Interior elegante y sereno del spa Ellie Rituals" class="rounded-lg shadow-2xl object-cover w-full h-full max-h-[550px]" loading="lazy"></div>
                     <div class="reveal" style="transition-delay: 200ms;">
-                        <h2 class="text-4xl md:text-5xl font-heading text-white mb-6">El Arte de Sostener</h2>
-                        <p class="text-lg mb-4 text-accent">Filosofía Ellie Rituals
+                        <h2 class="text-4xl md:text-5xl font-heading text-white mb-8">El Arte de Sostener</h2>
+                        
+                        <!-- Filosofía -->
+                        <div class="mb-8">
+                            <div class="flex items-center mb-4">
+                                <i data-lucide="heart" class="w-6 h-6 text-accent mr-3"></i>
+                                <h3 class="text-2xl font-heading text-accent">Nuestra Filosofía</h3>
+                            </div>
+                            <p class="text-lg text-cream/90 leading-relaxed mb-3 italic font-semibold">"Sostenemos tu cuerpo, elevamos tu energía."</p>
+                            <p class="text-lg text-cream/80 leading-relaxed">En Ellie Rituals, cada encuentro es un ritual sagrado donde el cuerpo encuentra descanso y el alma, dirección. No solo tocamos músculos, tocamos memorias. No solo relajamos, reconectamos. Aquí, el cuerpo es honrado como un templo y la energía como una vía sutil hacia el equilibrio profundo.</p>
+                        </div>
 
-Sostenemos tu cuerpo, elevamos tu energía.
+                        <!-- Medicina Natural -->
+                        <div class="mb-8">
+                            <div class="flex items-center mb-4">
+                                <i data-lucide="leaf" class="w-6 h-6 text-accent mr-3"></i>
+                                <h3 class="text-2xl font-heading text-accent">Medicina Natural y Energética</h3>
+                            </div>
+                            <p class="text-lg text-cream/80 leading-relaxed">Trabajamos con medicina natural y energética: nuestras manos se acompañan de hierbas, aceites botánicos y esencias vibracionales que han sido cuidadosamente elegidos para sostenerte, abrir tu energía y guiarte hacia una experiencia sensorial y sanadora. Cada aroma tiene propósito. Cada planta, una intención.</p>
+                        </div>
 
-En Ellie Rituals, cada encuentro es un ritual sagrado donde el cuerpo encuentra descanso y el alma, dirección.
-No solo tocamos músculos, tocamos memorias. No solo relajamos, reconectamos. Aquí, el cuerpo es honrado como un templo y la energía como una vía sutil hacia el equilibrio profundo.
-</p>
-                        <p class="text-lg text-cream/80">Trabajamos con medicina natural y energética: nuestras manos se acompañan de hierbas, aceites botánicos y esencias vibracionales que han sido cuidadosamente elegidos para sostenerte, abrir tu energía y guiarte hacia una experiencia sensorial y sanadora. Cada aroma tiene propósito. Cada planta, una intención.
+                        <!-- Nuestro Método -->
+                        <div class="mb-8">
+                            <div class="flex items-center mb-4">
+                                <i data-lucide="sparkles" class="w-6 h-6 text-accent mr-3"></i>
+                                <h3 class="text-2xl font-heading text-accent">Nuestro Método</h3>
+                            </div>
+                            <p class="text-lg text-cream/80 leading-relaxed mb-3">Sostenemos tu cuerpo con presencia amorosa y elevamos tu energía a través del tacto, el silencio, la respiración y la intención.</p>
+                            <p class="text-lg text-cream/80 leading-relaxed">Nuestro enfoque es holístico, terapéutico y profundamente intuitivo. Fusionamos técnicas manuales, aparatología consciente, rituales energéticos y estética botánica para crear experiencias únicas de bienestar elevado. Todo está pensado para personas que buscan más que resultados estéticos o físicos: buscan una transformación real, sutil y duradera.</p>
+                        </div>
 
-Sostenemos tu cuerpo con presencia amorosa y elevamos tu energía a través del tacto, el silencio, la respiración y la intención.
+                        <!-- Este espacio es para ti -->
+                        <div class="mb-8">
+                            <div class="flex items-center mb-4">
+                                <i data-lucide="user-check" class="w-6 h-6 text-accent mr-3"></i>
+                                <h3 class="text-2xl font-heading text-accent">Este Espacio es Para Ti Si...</h3>
+                            </div>
+                            <ul class="space-y-3 text-lg text-cream/80">
+                                <li class="flex items-start">
+                                    <span class="text-accent mr-3 mt-1">✓</span>
+                                    <span>Valorás el descanso consciente como medicina</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-accent mr-3 mt-1">✓</span>
+                                    <span>Buscas tratamientos que honren lo físico y también lo invisible</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-accent mr-3 mt-1">✓</span>
+                                    <span>Estás en un camino de autoconocimiento, sanación o expansión</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-accent mr-3 mt-1">✓</span>
+                                    <span>Deseas invertir en experiencias de alto nivel energético y emocional</span>
+                                </li>
+                            </ul>
+                        </div>
 
-Nuestro enfoque es holístico, terapéutico y profundamente intuitivo. Fusionamos técnicas manuales, aparatología consciente, rituales energéticos y estética botánica para crear experiencias únicas de bienestar elevado.
-Todo está pensado para personas que buscan más que resultados estéticos o físicos: buscan una transformación real, sutil y duradera.
-
-Este espacio es para ti si...
-
-Valorás el descanso consciente como medicina.
-
-Buscas tratamientos que honren lo físico y también lo invisible.
-
-Estás en un camino de autoconocimiento, sanación o expansión.
-
-Deseas invertir en experiencias de alto nivel energético y emocional.
-
-
-Ellie Rituals no es una cabina. Es un portal de retorno a ti misma.
-Una pausa profunda. Una elección de autocuidado elevado.
-Un ritual diseñado con alma, para elevarte con belleza, suavidad y poder.</p>
+                        <!-- Quote Final -->
+                        <div class="border-l-4 border-accent pl-6 py-4 bg-white/5 rounded-r-lg">
+                            <p class="text-xl text-white leading-relaxed italic mb-2">Ellie Rituals no es una cabina. Es un portal de retorno a ti misma.</p>
+                            <p class="text-lg text-cream/80 leading-relaxed">Una pausa profunda. Una elección de autocuidado elevado. Un ritual diseñado con alma, para elevarte con belleza, suavidad y poder.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -341,7 +882,7 @@ Un ritual diseñado con alma, para elevarte con belleza, suavidad y poder.</p>
                                 <div class="flex items-start space-x-4"><i data-lucide="instagram" class="text-dark-green mt-1 flex-shrink-0"></i><div><h4 class="font-semibold text-lg">Instagram</h4><a href="https://www.instagram.com/ellierituals" target="_blank" class="text-gray-600 hover:text-dark-green transition-colors">@ellierituals</a></div></div>
                                 <div class="flex items-start space-x-4"><i data-lucide="clock" class="text-dark-green mt-1 flex-shrink-0"></i><div><h4 class="font-semibold text-lg">Horario</h4><p class="text-gray-600">Lunes a Sábado: 10:00 - 20:00</p><p class="text-gray-600">Domingo: Cerrado</p></div></div>
                             </div>
-                            <div class="mt-10"><a href="https://wa.me/5215629137446?text=Hola,%20me%20gustaría%20agendar%20una%20sesión%20en%20Ellie%20Rituals." target="_blank" class="w-full text-center bg-dark-green text-white px-10 py-4 rounded-full text-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 inline-block">Contactar por WhatsApp</a></div>
+                            <div class="mt-10"><a href="https://wa.me/5215629137446?text=Hola,%20me%20gustaría%20agendar%20una%20sesión%20en%20Ellie%20Rituals." target="_blank" class="btn-primary w-full text-lg px-10 py-4">Contactar por WhatsApp</a></div>
                         </div>
                         <div class="w-full h-[300px] lg:h-full rounded-lg overflow-hidden shadow-lg lg:col-span-3"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.464655531924!2d-99.21041882478208!3d19.43552098184519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d201e4a6a5758b%3A0x8e521b3437c3556d!2sC.%20San%20Isidro%2063%2C%20Reforma%20Social%2C%20Miguel%20Hidalgo%2C%2011650%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1721634033285!5m2!1ses-419!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
                     </div>
@@ -349,11 +890,295 @@ Un ritual diseñado con alma, para elevarte con belleza, suavidad y poder.</p>
                 
                 <div class="reveal">
                     <h3 class="text-3xl font-heading text-dark-green text-center mb-10">Nuestro Santuario</h3>
-                    <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <img src="https://images.unsplash.com/photo-1583416750470-3f8f4b7a24c8?q=80&w=2664&auto=format&fit=crop" alt="Recepción del spa con decoración minimalista" class="gallery-image rounded-lg shadow-md w-full h-full object-cover aspect-square cursor-pointer hover:opacity-80 transition-opacity" loading="lazy">
-                        <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=2575&auto=format&fit=crop" alt="Sala de masaje tranquila y equipada" class="gallery-image rounded-lg shadow-md w-full h-full object-cover aspect-square cursor-pointer hover:opacity-80 transition-opacity" loading="lazy">
-                        <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=2670&auto=format&fit=crop" alt="Detalles decorativos naturales en el spa" class="gallery-image rounded-lg shadow-md w-full h-full object-cover aspect-square cursor-pointer hover:opacity-80 transition-opacity" loading="lazy">
-                        <img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?q=80&w=2670&auto=format&fit=crop" alt="Zona de relajación con ambiente sereno" class="gallery-image rounded-lg shadow-md w-full h-full object-cover aspect-square cursor-pointer hover:opacity-80 transition-opacity" loading="lazy">
+                    <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">Descubre cada rincón de nuestro espacio diseñado para tu paz y bienestar. <em>Estas son fotos de referencia - pronto añadiremos imágenes reales de nuestro santuario.</em></p>
+                    <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                        <img src="https://images.unsplash.com/photo-1583416750470-3f8f4b7a24c8?q=80&w=800&auto=format&fit=crop" alt="Recepción del spa con decoración minimalista" class="gallery-image rounded-lg shadow-md w-full h-full object-cover aspect-square cursor-pointer hover:opacity-80 transition-opacity" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=800&auto=format&fit=crop" alt="Sala de masaje tranquila y equipada" class="gallery-image rounded-lg shadow-md w-full h-full object-cover aspect-square cursor-pointer hover:opacity-80 transition-opacity" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=800&auto=format&fit=crop" alt="Detalles decorativos naturales en el spa" class="gallery-image rounded-lg shadow-md w-full h-full object-cover aspect-square cursor-pointer hover:opacity-80 transition-opacity" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?q=80&w=800&auto=format&fit=crop" alt="Zona de relajación con ambiente sereno" class="gallery-image rounded-lg shadow-md w-full h-full object-cover aspect-square cursor-pointer hover:opacity-80 transition-opacity" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=800&auto=format&fit=crop" alt="Productos naturales y aceites esenciales" class="gallery-image rounded-lg shadow-md w-full h-full object-cover aspect-square cursor-pointer hover:opacity-80 transition-opacity" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=800&auto=format&fit=crop" alt="Camilla de masaje con toallas blancas" class="gallery-image rounded-lg shadow-md w-full h-full object-cover aspect-square cursor-pointer hover:opacity-80 transition-opacity" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1610436280-c9e1ba45e505?q=80&w=800&auto=format&fit=crop" alt="Velas aromáticas y ambiente relajante" class="gallery-image rounded-lg shadow-md w-full h-full object-cover aspect-square cursor-pointer hover:opacity-80 transition-opacity" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1552693673-1bf958298935?q=80&w=800&auto=format&fit=crop" alt="Piedras calientes para masaje" class="gallery-image rounded-lg shadow-md w-full h-full object-cover aspect-square cursor-pointer hover:opacity-80 transition-opacity" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?q=80&w=800&auto=format&fit=crop" alt="Área de espera con decoración natural" class="gallery-image rounded-lg shadow-md w-full h-full object-cover aspect-square cursor-pointer hover:opacity-80 transition-opacity" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?q=80&w=800&auto=format&fit=crop" alt="Flores y detalles botánicos" class="gallery-image rounded-lg shadow-md w-full h-full object-cover aspect-square cursor-pointer hover:opacity-80 transition-opacity" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?q=80&w=800&auto=format&fit=crop" alt="Espacio de tratamientos faciales" class="gallery-image rounded-lg shadow-md w-full h-full object-cover aspect-square cursor-pointer hover:opacity-80 transition-opacity" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?q=80&w=800&auto=format&fit=crop" alt="Vista del santuario de bienestar" class="gallery-image rounded-lg shadow-md w-full h-full object-cover aspect-square cursor-pointer hover:opacity-80 transition-opacity" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Sección de Certificados Regalo -->
+        <section id="regalos" class="py-24 md:py-32 bg-gradient-to-br from-dark-green to-dark-green/90">
+            <div class="container mx-auto px-6">
+                <div class="max-w-5xl mx-auto">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <!-- Contenido -->
+                        <div class="reveal text-white">
+                            <div class="inline-block bg-accent/20 px-4 py-2 rounded-full mb-6">
+                                <span class="text-accent font-semibold">El Regalo Perfecto</span>
+                            </div>
+                            <h2 class="text-4xl md:text-5xl font-heading mb-6">Certificados Regalo</h2>
+                            <p class="text-xl text-cream/90 mb-8 leading-relaxed">Regala una experiencia de autocuidado elevado. Un momento de pausa, conexión y bienestar que recordarán para siempre.</p>
+                            
+                            <div class="space-y-4 mb-8">
+                                <div class="flex items-start">
+                                    <i data-lucide="gift" class="w-6 h-6 text-accent mr-4 mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <h3 class="font-semibold text-lg mb-1">Flexible y Personalizable</h3>
+                                        <p class="text-cream/80">Elige el ritual específico o un monto a elección</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i data-lucide="calendar" class="w-6 h-6 text-accent mr-4 mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <h3 class="font-semibold text-lg mb-1">Válido por 6 Meses</h3>
+                                        <p class="text-cream/80">Tiempo suficiente para encontrar el momento perfecto</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i data-lucide="sparkles" class="w-6 h-6 text-accent mr-4 mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <h3 class="font-semibold text-lg mb-1">Presentación Elegante</h3>
+                                        <p class="text-cream/80">Formato físico con diseño especial o digital para envío inmediato</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="https://wa.me/5215629137446?text=Hola,%20me%20gustaría%20adquirir%20un%20certificado%20regalo%20de%20Ellie%20Rituals." target="_blank" onclick="if(typeof trackWhatsAppClick === 'function') trackWhatsAppClick('Certificado Regalo');" class="btn-outline-light inline-block">
+                                Adquirir Certificado
+                            </a>
+                        </div>
+
+                        <!-- Tarjeta Visual Gift Card -->
+                        <div class="reveal" style="transition-delay: 200ms;">
+                            <div class="bg-gradient-to-br from-cream to-accent p-8 md:p-12 rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                                <div class="text-center mb-8">
+                                    <svg width="100" height="60" viewBox="0 0 140 70" fill="none" xmlns="http://www.w3.org/2000/svg" class="mx-auto mb-4">
+                                        <path d="M30 15 C30 8 35 8 40 8 L100 8 C105 8 110 8 110 15 L110 30" stroke="#344a3a" stroke-width="2" fill="none" stroke-linecap="round"/>
+                                        <line x1="30" y1="15" x2="30" y2="30" stroke="#344a3a" stroke-width="2" stroke-linecap="round"/>
+                                        <line x1="110" y1="15" x2="110" y2="30" stroke="#344a3a" stroke-width="2" stroke-linecap="round"/>
+                                        <ellipse cx="70" cy="22" rx="4" ry="12" fill="#344a3a"/>
+                                        <text x="70" y="50" font-family="serif" font-size="12" font-weight="700" fill="#344a3a" text-anchor="middle" letter-spacing="1px">ELLIE</text>
+                                        <text x="70" y="60" font-family="serif" font-size="6" font-weight="400" fill="#344a3a" text-anchor="middle" letter-spacing="2px">RITUALS</text>
+                                    </svg>
+                                    <h3 class="text-2xl font-heading text-dark-green mb-2">Certificado Regalo</h3>
+                                    <p class="text-dark-green/70 text-sm">Un viaje hacia el bienestar</p>
+                                </div>
+                                
+                                <div class="border-t-2 border-dashed border-dark-green/20 pt-6">
+                                    <div class="flex justify-between items-center mb-4">
+                                        <span class="text-dark-green/70">Para:</span>
+                                        <span class="text-dark-green font-semibold">_________________</span>
+                                    </div>
+                                    <div class="flex justify-between items-center mb-4">
+                                        <span class="text-dark-green/70">De:</span>
+                                        <span class="text-dark-green font-semibold">_________________</span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-dark-green/70">Valor:</span>
+                                        <span class="text-2xl font-bold text-dark-green">$________</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-6 text-center">
+                                    <p class="text-xs text-dark-green/60">Válido por 6 meses desde la fecha de emisión</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ocasiones Perfectas -->
+                    <div class="mt-16 reveal">
+                        <h3 class="text-2xl font-heading text-white text-center mb-8">Perfecto Para...</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+                            <div class="text-center p-4 bg-white/10 rounded-lg backdrop-blur-sm">
+                                <i data-lucide="cake" class="w-8 h-8 text-accent mx-auto mb-2"></i>
+                                <p class="text-white text-sm">Cumpleaños</p>
+                            </div>
+                            <div class="text-center p-4 bg-white/10 rounded-lg backdrop-blur-sm">
+                                <i data-lucide="heart" class="w-8 h-8 text-accent mx-auto mb-2"></i>
+                                <p class="text-white text-sm">Aniversarios</p>
+                            </div>
+                            <div class="text-center p-4 bg-white/10 rounded-lg backdrop-blur-sm">
+                                <i data-lucide="users" class="w-8 h-8 text-accent mx-auto mb-2"></i>
+                                <p class="text-white text-sm">Día de las Madres</p>
+                            </div>
+                            <div class="text-center p-4 bg-white/10 rounded-lg backdrop-blur-sm">
+                                <i data-lucide="star" class="w-8 h-8 text-accent mx-auto mb-2"></i>
+                                <p class="text-white text-sm">Celebraciones</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Políticas -->
+        <section id="politicas" class="py-20 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-3xl md:text-4xl font-heading text-dark-green mb-4">Información Importante</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Queremos que tu experiencia sea perfecta. Aquí encuentras todo lo que necesitas saber.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Política de Cancelación -->
+                    <div class="bg-cream p-8 rounded-lg shadow-md reveal">
+                        <div class="w-12 h-12 bg-dark-green rounded-full flex items-center justify-center mb-4">
+                            <i data-lucide="calendar-x" class="text-white w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-heading text-dark-green mb-3">Cancelaciones</h3>
+                        <p class="text-gray-700 leading-relaxed mb-3">Puedes cancelar o reagendar sin costo hasta <strong>24 horas antes</strong> de tu cita.</p>
+                        <p class="text-gray-600 text-sm">Cancelaciones con menos de 24 horas tienen un cargo del 50% para respetar el tiempo reservado.</p>
+                    </div>
+
+                    <!-- Qué traer -->
+                    <div class="bg-cream p-8 rounded-lg shadow-md reveal" style="transition-delay: 100ms;">
+                        <div class="w-12 h-12 bg-dark-green rounded-full flex items-center justify-center mb-4">
+                            <i data-lucide="shopping-bag" class="text-white w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-heading text-dark-green mb-3">Qué Traer</h3>
+                        <p class="text-gray-700 leading-relaxed mb-3"><strong>Nada.</strong> Nosotras nos encargamos de todo: toallas, batas y amenidades.</p>
+                        <p class="text-gray-600 text-sm">Solo trae tu disposición para relajarte. Si tienes alergias o preferencias, comunícalo al agendar.</p>
+                    </div>
+
+                    <!-- Primera Visita -->
+                    <div class="bg-cream p-8 rounded-lg shadow-md reveal" style="transition-delay: 200ms;">
+                        <div class="w-12 h-12 bg-dark-green rounded-full flex items-center justify-center mb-4">
+                            <i data-lucide="clock" class="text-white w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-heading text-dark-green mb-3">Primera Visita</h3>
+                        <p class="text-gray-700 leading-relaxed mb-3">Llega <strong>10 minutos antes</strong> para completar un breve cuestionario de bienestar.</p>
+                        <p class="text-gray-600 text-sm">Esto nos ayuda a personalizar tu ritual según tus necesidades específicas.</p>
+                    </div>
+
+                    <!-- Formas de Pago -->
+                    <div class="bg-cream p-8 rounded-lg shadow-md reveal" style="transition-delay: 300ms;">
+                        <div class="w-12 h-12 bg-dark-green rounded-full flex items-center justify-center mb-4">
+                            <i data-lucide="credit-card" class="text-white w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-heading text-dark-green mb-3">Formas de Pago</h3>
+                        <p class="text-gray-700 leading-relaxed mb-3">Aceptamos efectivo, tarjetas (Visa, Mastercard, Amex) y transferencias.</p>
+                        <p class="text-gray-600 text-sm">El pago se realiza al finalizar tu sesión. Para paquetes, ofrecemos planes de pago.</p>
+                    </div>
+
+                    <!-- Estacionamiento -->
+                    <div class="bg-cream p-8 rounded-lg shadow-md reveal" style="transition-delay: 400ms;">
+                        <div class="w-12 h-12 bg-dark-green rounded-full flex items-center justify-center mb-4">
+                            <i data-lucide="car" class="text-white w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-heading text-dark-green mb-3">Estacionamiento</h3>
+                        <p class="text-gray-700 leading-relaxed mb-3">Estacionamiento <strong>gratuito</strong> en el edificio. También hay parquímetros en la calle.</p>
+                        <p class="text-gray-600 text-sm">Ubicación accesible en Polanco, cerca de transporte público y apps de movilidad.</p>
+                    </div>
+
+                    <!-- Protocolos de Higiene -->
+                    <div class="bg-cream p-8 rounded-lg shadow-md reveal" style="transition-delay: 500ms;">
+                        <div class="w-12 h-12 bg-dark-green rounded-full flex items-center justify-center mb-4">
+                            <i data-lucide="shield-check" class="text-white w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-heading text-dark-green mb-3">Higiene y Seguridad</h3>
+                        <p class="text-gray-700 leading-relaxed mb-3">Mantenemos los <strong>más altos estándares</strong> de limpieza y desinfección.</p>
+                        <p class="text-gray-600 text-sm">Todas las superficies, toallas y equipos son sanitizados después de cada sesión.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección FAQ -->
+        <section id="faq" class="py-24 md:py-32 bg-dark-green">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-4xl md:text-5xl font-heading text-white mb-4">Preguntas Frecuentes</h2>
+                    <p class="text-accent/90 text-lg max-w-2xl mx-auto">Resolvemos tus dudas para que tu experiencia sea perfecta</p>
+                </div>
+                <div class="max-w-3xl mx-auto space-y-4 reveal">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item bg-white/5 backdrop-blur-sm rounded-lg overflow-hidden border border-accent/20">
+                        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-white/10 transition-colors" aria-expanded="false">
+                            <span class="text-white font-semibold text-lg pr-8">¿Necesito traer algo a mi sesión?</span>
+                            <i data-lucide="chevron-down" class="text-accent flex-shrink-0 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-5">
+                            <p class="text-cream/80 leading-relaxed">No necesitas traer nada. Te proporcionamos todo lo necesario: toallas, batas, y productos de primera calidad. Solo trae tu disposición para relajarte. Si tienes alguna preferencia especial (alergias, intensidad de aromas), comunícanoslo al agendar.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item bg-white/5 backdrop-blur-sm rounded-lg overflow-hidden border border-accent/20">
+                        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-white/10 transition-colors" aria-expanded="false">
+                            <span class="text-white font-semibold text-lg pr-8">¿Con cuánta anticipación debo agendar?</span>
+                            <i data-lucide="chevron-down" class="text-accent flex-shrink-0 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-5">
+                            <p class="text-cream/80 leading-relaxed">Recomendamos agendar con al menos 48 horas de anticipación para asegurar tu espacio preferido. Sin embargo, también manejamos citas del mismo día según disponibilidad. Contáctanos por WhatsApp y con gusto verificamos nuestros espacios disponibles.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item bg-white/5 backdrop-blur-sm rounded-lg overflow-hidden border border-accent/20">
+                        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-white/10 transition-colors" aria-expanded="false">
+                            <span class="text-white font-semibold text-lg pr-8">¿Cuál es la política de cancelación?</span>
+                            <i data-lucide="chevron-down" class="text-accent flex-shrink-0 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-5">
+                            <p class="text-cream/80 leading-relaxed">Entendemos que surgen imprevistos. Puedes cancelar o reagendar sin costo hasta 24 horas antes de tu cita. Cancelaciones con menos de 24 horas de anticipación tienen un cargo del 50%. Agradecemos tu comprensión, esto nos permite ofrecer ese espacio a otra persona.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item bg-white/5 backdrop-blur-sm rounded-lg overflow-hidden border border-accent/20">
+                        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-white/10 transition-colors" aria-expanded="false">
+                            <span class="text-white font-semibold text-lg pr-8">¿Qué formas de pago aceptan?</span>
+                            <i data-lucide="chevron-down" class="text-accent flex-shrink-0 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-5">
+                            <p class="text-cream/80 leading-relaxed">Aceptamos efectivo, tarjetas de crédito y débito (Visa, Mastercard, American Express), y transferencias bancarias. El pago se realiza al finalizar tu sesión. Para paquetes y membresías, también ofrecemos planes de pago.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="faq-item bg-white/5 backdrop-blur-sm rounded-lg overflow-hidden border border-accent/20">
+                        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-white/10 transition-colors" aria-expanded="false">
+                            <span class="text-white font-semibold text-lg pr-8">¿Hay estacionamiento disponible?</span>
+                            <i data-lucide="chevron-down" class="text-accent flex-shrink-0 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-5">
+                            <p class="text-cream/80 leading-relaxed">Sí, contamos con estacionamiento gratuito en el edificio. También hay estacionamiento en la calle (zona de parquímetros). Estamos muy bien ubicados en Polanco, con fácil acceso en transporte público y servicios de app.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 6 -->
+                    <div class="faq-item bg-white/5 backdrop-blur-sm rounded-lg overflow-hidden border border-accent/20">
+                        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-white/10 transition-colors" aria-expanded="false">
+                            <span class="text-white font-semibold text-lg pr-8">¿Ofrecen paquetes o descuentos?</span>
+                            <i data-lucide="chevron-down" class="text-accent flex-shrink-0 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-5">
+                            <p class="text-cream/80 leading-relaxed">¡Sí! Contamos con paquetes de 3, 5 y 10 sesiones con descuentos de hasta 20%. También ofrecemos promociones especiales en fechas importantes. Pregunta por nuestros paquetes personalizados al contactarnos.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 7 -->
+                    <div class="faq-item bg-white/5 backdrop-blur-sm rounded-lg overflow-hidden border border-accent/20">
+                        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-white/10 transition-colors" aria-expanded="false">
+                            <span class="text-white font-semibold text-lg pr-8">¿Puedo regalar un certificado de sesión?</span>
+                            <i data-lucide="chevron-down" class="text-accent flex-shrink-0 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-5">
+                            <p class="text-cream/80 leading-relaxed">¡Por supuesto! Los certificados regalo son perfectos para ocasiones especiales. Puedes adquirirlos para rituales específicos o por monto. Se entregan en formato físico elegante o digital. Válidos por 6 meses desde su emisión.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 8 -->
+                    <div class="faq-item bg-white/5 backdrop-blur-sm rounded-lg overflow-hidden border border-accent/20">
+                        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-white/10 transition-colors" aria-expanded="false">
+                            <span class="text-white font-semibold text-lg pr-8">¿Es mi primera vez, qué ritual me recomiendan?</span>
+                            <i data-lucide="chevron-down" class="text-accent flex-shrink-0 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-5">
+                            <p class="text-cream/80 leading-relaxed">Para primerizas, recomendamos "Renovación Profunda" o "Calma Absoluta" - son experiencias completas que te permiten conocer nuestra filosofía. Si buscas algo más breve, "Serenidad Craneal" es perfecta para empezar. Con gusto te asesoramos según tus necesidades al contactarnos.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -361,7 +1186,7 @@ Un ritual diseñado con alma, para elevarte con belleza, suavidad y poder.</p>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-dark-green text-cream">
+    <footer role="contentinfo" class="bg-dark-green text-cream">
         <div class="container mx-auto px-6 py-10 text-center">
             <!-- Logo en el footer -->
             <a href="#inicio" class="logo-hover inline-block mb-6">
@@ -390,16 +1215,36 @@ Un ritual diseñado con alma, para elevarte con belleza, suavidad y poder.</p>
 
     <!-- Rituals Modal -->
     <div id="ritual-modal" class="modal-overlay fixed inset-0 bg-black bg-opacity-80 z-[60] flex items-center justify-center p-4 hidden opacity-0">
-        <div class="modal-content bg-white w-full max-w-4xl max-h-[90vh] rounded-lg shadow-2xl flex flex-col opacity-0 transform scale-95">
-            <button class="close-modal-btn absolute top-4 right-4 bg-white/80 text-gray-800 rounded-full p-2 hover:bg-white transition-colors z-10" aria-label="Cerrar modal"><i data-lucide="x"></i></button>
+        <div class="modal-content bg-white w-full max-w-4xl max-h-[90vh] rounded-lg shadow-2xl flex flex-col opacity-0 transform scale-95 relative">
+            <button class="close-modal-btn absolute top-4 right-4 bg-white/90 text-gray-800 rounded-full p-2 hover:bg-white transition-colors z-20 shadow-lg" aria-label="Cerrar modal"><i data-lucide="x"></i></button>
+            
+            <!-- Navegación anterior/siguiente -->
+            <button id="prev-ritual" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 text-dark-green rounded-full p-3 hover:bg-white transition-all z-20 shadow-lg hidden md:block" aria-label="Ritual anterior">
+                <i data-lucide="chevron-left" class="w-6 h-6"></i>
+            </button>
+            <button id="next-ritual" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 text-dark-green rounded-full p-3 hover:bg-white transition-all z-20 shadow-lg hidden md:block" aria-label="Siguiente ritual">
+                <i data-lucide="chevron-right" class="w-6 h-6"></i>
+            </button>
+            
             <div class="flex-grow overflow-y-auto">
                 <div class="grid md:grid-cols-2">
                     <div class="relative"><img id="modal-ritual-img" src="" alt="Detalle del ritual" class="w-full h-full object-cover md:rounded-l-lg min-h-[250px] md:min-h-0"></div>
-                    <div class="p-6 md:p-8">
+                    <div class="p-6 md:p-8 flex flex-col">
                         <h3 id="modal-ritual-title" class="text-3xl md:text-4xl font-heading text-dark-green mb-4"></h3>
-                        <p id="modal-ritual-desc" class="text-gray-600 leading-relaxed mb-6"></p>
+                        <p id="modal-ritual-desc" class="text-gray-600 leading-relaxed mb-6 flex-grow"></p>
                         <h4 class="text-2xl font-heading text-dark-green mb-4 border-b pb-2">Detalles Clave</h4>
-                        <div id="modal-ritual-details" class="space-y-4 text-gray-700"></div>
+                        <div id="modal-ritual-details" class="space-y-4 text-gray-700 mb-6"></div>
+                        
+                        <!-- CTAs en modal -->
+                        <div class="space-y-3 mt-auto">
+                            <a id="modal-ritual-whatsapp" href="#" target="_blank" class="btn-primary w-full text-center block">
+                                Agendar Este Ritual
+                            </a>
+                            <button id="share-ritual" class="btn-secondary w-full">
+                                <i data-lucide="share-2" class="w-4 h-4 inline mr-2"></i>
+                                Compartir Ritual
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -425,14 +1270,49 @@ Un ritual diseñado con alma, para elevarte con belleza, suavidad y poder.</p>
             mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
             document.querySelectorAll('#mobile-menu a').forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
 
-            // --- Header Scroll Effect ---
+            // --- Header Scroll Effect + Progress Bar + Active Section ---
             const header = document.getElementById('header');
+            const stickyCta = document.getElementById('sticky-cta');
+            const progressBar = document.getElementById('progress-bar');
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('nav a[href^="#"], #mobile-menu a[href^="#"]');
+            
             window.addEventListener('scroll', () => {
                 const isScrolled = window.scrollY > 50;
                 header.classList.toggle('bg-dark-green/90', isScrolled);
                 header.classList.toggle('backdrop-blur-md', isScrolled);
                 header.classList.toggle('shadow-lg', isScrolled);
                 header.classList.toggle('bg-transparent', !isScrolled);
+                
+                // Show sticky CTA after scrolling past hero
+                const heroHeight = document.getElementById('inicio').offsetHeight;
+                if (window.scrollY > heroHeight * 0.7) {
+                    stickyCta.classList.add('visible');
+                } else {
+                    stickyCta.classList.remove('visible');
+                }
+                
+                // Progress bar
+                const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (window.scrollY / windowHeight) * 100;
+                progressBar.style.width = scrolled + '%';
+                
+                // Highlight active section
+                let currentSection = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100;
+                    const sectionHeight = section.offsetHeight;
+                    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active-nav');
+                    if (link.getAttribute('href') === '#' + currentSection) {
+                        link.classList.add('active-nav');
+                    }
+                });
             });
             
             // --- Parallax Effect on Hero ---
@@ -457,12 +1337,12 @@ Un ritual diseñado con alma, para elevarte con belleza, suavidad y poder.</p>
 
             // --- Rituals Data & Rendering ---
             const rituals = [
-                { title: "Renovación Profunda", img: "https://images.unsplash.com/photo-1544161515-cfdce9420201?q=80&w=2592&auto=format&fit=crop", desc: "Una combinación experta de masaje descontracturante y aromaterapia. Diseñado para disolver nudos de tensión, liberar el estrés acumulado y revitalizar tu energía vital.", duration: "90 min", focus: "Relajación y Descontracturante", products: "Aceites Esenciales Puros", cost: "Consultar", alt: "Mujer recibiendo un masaje de espalda con aceites" },
-                { title: "Facial Luminoso", img: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=2592&auto=format&fit=crop", desc: "Un tratamiento holístico que utiliza productos orgánicos para limpiar, nutrir e hidratar. Un masaje facial estimula la circulación y devuelve la vitalidad natural a tu piel.", duration: "60 min", focus: "Hidratación y Luminosidad", products: "Cosmética Orgánica", cost: "Consultar", alt: "Aplicación de una mascarilla facial a una mujer" },
-                { title: "Calma Absoluta", img: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=2670&auto=format&fit=crop", desc: "Sumérgete en paz total con este masaje relajante. El calor de las piedras volcánicas penetra en los músculos mientras los aceites esenciales calman tu sistema nervioso.", duration: "120 min", focus: "Relajación Profunda", products: "Piedras Volcánicas", cost: "Consultar", alt: "Piedras de masaje calientes sobre la espalda de una persona" },
-                { title: "Energía Cítrica", img: "https://images.unsplash.com/photo-1600334089648-b0d9d3028269?q=80&w=2574&auto=format&fit=crop", desc: "Despierta tus sentidos con este tratamiento revitalizante. Una exfoliación suave con sales y cítricos, seguida de un masaje enérgico para estimular la circulación y recargar tu energía.", duration: "75 min", focus: "Energizante y Tonificante", products: "Exfoliantes Cítricos", cost: "Consultar", alt: "Tazón with ingredientes cítricos para exfoliación" },
-                { title: "Tierra y Raíces", img: "https://images.unsplash.com/photo-1616332353323-27515b6a716a?q=80&w=2574&auto=format&fit=crop", desc: "Conéctate con la tierra a través de este masaje de presión profunda enfocado en pies, piernas y espalda. Utilizamos técnicas de reflexología y aceites amaderados para anclarte.", duration: "90 min", focus: "Anclaje y Liberación", products: "Aceites Amaderados", cost: "Consultar", alt: "Masaje de pies enfocado en reflexología" },
-                { title: "Serenidad Craneal", img: "https://images.unsplash.com/photo-1604523450325-1a4cf4a1d2f2?q=80&w=2574&auto=format&fit=crop", desc: "Un masaje enfocado en cabeza, cuello y hombros para aliviar migrañas, fatiga visual y estrés mental. Un bálsamo para una mente sobrecargada.", duration: "45 min", focus: "Alivio Mental y Tensión", products: "Aromaterapia de Lavanda", cost: "Consultar", alt: "Mujer disfrutando de un masaje en la cabeza" },
+                { title: "Renovación Profunda", img: "https://images.unsplash.com/photo-1544161515-cfdce9420201?q=80&w=2592&auto=format&fit=crop", desc: "Una combinación experta de masaje descontracturante y aromaterapia. Diseñado para disolver nudos de tensión, liberar el estrés acumulado y revitalizar tu energía vital.", duration: "90 min", focus: "Relajación y Descontracturante", products: "Aceites Esenciales Puros", cost: "$1,800", alt: "Mujer recibiendo un masaje de espalda con aceites" },
+                { title: "Facial Luminoso", img: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=2592&auto=format&fit=crop", desc: "Un tratamiento holístico que utiliza productos orgánicos para limpiar, nutrir e hidratar. Un masaje facial estimula la circulación y devuelve la vitalidad natural a tu piel.", duration: "60 min", focus: "Hidratación y Luminosidad", products: "Cosmética Orgánica", cost: "$1,200", alt: "Aplicación de una mascarilla facial a una mujer" },
+                { title: "Calma Absoluta", img: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=2670&auto=format&fit=crop", desc: "Sumérgete en paz total con este masaje relajante. El calor de las piedras volcánicas penetra en los músculos mientras los aceites esenciales calman tu sistema nervioso.", duration: "120 min", focus: "Relajación Profunda", products: "Piedras Volcánicas", cost: "$2,200", alt: "Piedras de masaje calientes sobre la espalda de una persona" },
+                { title: "Energía Cítrica", img: "https://images.unsplash.com/photo-1600334089648-b0d9d3028269?q=80&w=2574&auto=format&fit=crop", desc: "Despierta tus sentidos con este tratamiento revitalizante. Una exfoliación suave con sales y cítricos, seguida de un masaje enérgico para estimular la circulación y recargar tu energía.", duration: "75 min", focus: "Energizante y Tonificante", products: "Exfoliantes Cítricos", cost: "$1,500", alt: "Tazón with ingredientes cítricos para exfoliación" },
+                { title: "Tierra y Raíces", img: "https://images.unsplash.com/photo-1616332353323-27515b6a716a?q=80&w=2574&auto=format&fit=crop", desc: "Conéctate con la tierra a través de este masaje de presión profunda enfocado en pies, piernas y espalda. Utilizamos técnicas de reflexología y aceites amaderados para anclarte.", duration: "90 min", focus: "Anclaje y Liberación", products: "Aceites Amaderados", cost: "$1,800", alt: "Masaje de pies enfocado en reflexología" },
+                { title: "Serenidad Craneal", img: "https://images.unsplash.com/photo-1604523450325-1a4cf4a1d2f2?q=80&w=2574&auto=format&fit=crop", desc: "Un masaje enfocado en cabeza, cuello y hombros para aliviar migrañas, fatiga visual y estrés mental. Un bálsamo para una mente sobrecargada.", duration: "45 min", focus: "Alivio Mental y Tensión", products: "Aromaterapia de Lavanda", cost: "$900", alt: "Mujer disfrutando de un masaje en la cabeza" },
             ];
 
             const ritualsContainer = document.getElementById('rituals-grid');
@@ -476,11 +1356,15 @@ Un ritual diseñado con alma, para elevarte con belleza, suavidad y poder.</p>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-heading text-dark-green mb-2">${ritual.title}</h3>
-                        <span class="font-semibold text-dark-green/80 block mb-4">${ritual.duration}</span>
-                        <span class="text-dark-green font-semibold inline-block border-b-2 border-transparent group-hover:border-dark-green transition-all duration-300">Ver más →</span>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="font-semibold text-dark-green/80">${ritual.duration}</span>
+                            <span class="text-2xl font-bold text-dark-green">${ritual.cost}</span>
+                        </div>
+                        <button class="btn-secondary w-full mb-3" onclick="event.stopPropagation(); openRitualModal(rituals[${index}])">Ver Detalles</button>
+                        <a href="https://wa.me/5215629137446?text=Hola,%20me%20gustaría%20agendar%20${ritual.title}%20en%20Ellie%20Rituals." target="_blank" class="btn-primary w-full" onclick="event.stopPropagation()">Agendar Ahora</a>
                     </div>
                 `;
-                card.addEventListener('click', () => openRitualModal(ritual));
+                card.addEventListener('click', () => openRitualModal(ritual, index));
                 ritualsContainer.appendChild(card);
                 revealObserver.observe(card);
             });
@@ -488,8 +1372,10 @@ Un ritual diseñado con alma, para elevarte con belleza, suavidad y poder.</p>
             // --- Modal Logic ---
             const ritualModal = document.getElementById('ritual-modal');
             const galleryModal = document.getElementById('gallery-modal');
+            let currentRitualIndex = 0;
 
-            function openRitualModal(ritualData) {
+            function openRitualModal(ritualData, index = 0) {
+                currentRitualIndex = index;
                 document.getElementById('modal-ritual-img').src = ritualData.img;
                 document.getElementById('modal-ritual-img').alt = ritualData.alt;
                 document.getElementById('modal-ritual-title').textContent = ritualData.title;
@@ -500,9 +1386,58 @@ Un ritual diseñado con alma, para elevarte con belleza, suavidad y poder.</p>
                     <div class="flex items-start space-x-3"><i data-lucide="leaf" class="w-5 h-5 mt-1 text-dark-green flex-shrink-0"></i><div><strong>Productos:</strong> ${ritualData.products}</div></div>
                     <div class="flex items-start space-x-3"><i data-lucide="dollar-sign" class="w-5 h-5 mt-1 text-dark-green flex-shrink-0"></i><div><strong>Costo:</strong> ${ritualData.cost}</div></div>
                 `;
+                
+                // WhatsApp link personalizado con tracking
+                const whatsappLink = `https://wa.me/5215629137446?text=Hola,%20me%20gustaría%20agendar%20${encodeURIComponent(ritualData.title)}%20en%20Ellie%20Rituals.`;
+                const whatsappBtn = document.getElementById('modal-ritual-whatsapp');
+                whatsappBtn.href = whatsappLink;
+                whatsappBtn.onclick = () => {
+                    if(typeof trackWhatsAppClick === 'function') trackWhatsAppClick(ritualData.title);
+                };
+                
+                // Track ritual view
+                if(typeof trackRitualView === 'function') trackRitualView(ritualData.title);
+                
                 lucide.createIcons();
                 showModal(ritualModal);
             }
+
+            // Navegación entre rituales
+            document.getElementById('prev-ritual').addEventListener('click', () => {
+                currentRitualIndex = (currentRitualIndex - 1 + rituals.length) % rituals.length;
+                openRitualModal(rituals[currentRitualIndex], currentRitualIndex);
+            });
+
+            document.getElementById('next-ritual').addEventListener('click', () => {
+                currentRitualIndex = (currentRitualIndex + 1) % rituals.length;
+                openRitualModal(rituals[currentRitualIndex], currentRitualIndex);
+            });
+
+            // Compartir ritual
+            document.getElementById('share-ritual').addEventListener('click', async () => {
+                const ritual = rituals[currentRitualIndex];
+                const shareData = {
+                    title: `${ritual.title} - Ellie Rituals`,
+                    text: `${ritual.desc}\n\nDuración: ${ritual.duration} | Precio: ${ritual.cost}`,
+                    url: window.location.href
+                };
+                
+                try {
+                    if (navigator.share) {
+                        await navigator.share(shareData);
+                        showToast('¡Gracias por compartir!', 'success');
+                    } else {
+                        // Fallback: copiar al portapapeles
+                        const text = `${shareData.title}\n${shareData.text}\n${shareData.url}`;
+                        await navigator.clipboard.writeText(text);
+                        showToast('¡Enlace copiado al portapapeles!', 'success');
+                    }
+                } catch (err) {
+                    if (err.name !== 'AbortError') {
+                        showToast('No se pudo compartir', 'error');
+                    }
+                }
+            });
             
             document.querySelectorAll('.gallery-image').forEach(img => {
                 img.addEventListener('click', () => {
@@ -551,6 +1486,73 @@ Un ritual diseñado con alma, para elevarte con belleza, suavidad y poder.</p>
 
             // --- Footer Year ---
             document.getElementById('year').textContent = new Date().getFullYear();
+
+            // --- Toast Notification System ---
+            function showToast(message, type = 'success') {
+                const toast = document.getElementById('toast');
+                const toastMessage = document.getElementById('toast-message');
+                const icon = toast.querySelector('[data-lucide]');
+                
+                toastMessage.textContent = message;
+                toast.className = 'toast show ' + type;
+                
+                // Change icon based on type
+                if (type === 'success') {
+                    icon.setAttribute('data-lucide', 'check-circle');
+                } else if (type === 'error') {
+                    icon.setAttribute('data-lucide', 'alert-circle');
+                }
+                
+                lucide.createIcons();
+                
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 3000);
+            }
+
+            // --- Image Loading Optimization ---
+            document.querySelectorAll('.gallery-image, .ritual-card img').forEach(img => {
+                img.addEventListener('load', function() {
+                    this.classList.remove('image-loading');
+                });
+                img.addEventListener('error', function() {
+                    this.classList.remove('image-loading');
+                    console.error('Error loading image:', this.src);
+                });
+                if (!img.complete) {
+                    img.classList.add('image-loading');
+                }
+            });
+
+            // --- FAQ Accordion ---
+            document.querySelectorAll('.faq-question').forEach(button => {
+                button.addEventListener('click', () => {
+                    const faqItem = button.closest('.faq-item');
+                    const answer = faqItem.querySelector('.faq-answer');
+                    const icon = button.querySelector('[data-lucide="chevron-down"]');
+                    const isOpen = button.getAttribute('aria-expanded') === 'true';
+                    
+                    // Close all other items
+                    document.querySelectorAll('.faq-item').forEach(item => {
+                        if (item !== faqItem) {
+                            item.querySelector('.faq-answer').classList.add('hidden');
+                            item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                            item.querySelector('[data-lucide="chevron-down"]').style.transform = 'rotate(0deg)';
+                        }
+                    });
+                    
+                    // Toggle current item
+                    if (isOpen) {
+                        answer.classList.add('hidden');
+                        button.setAttribute('aria-expanded', 'false');
+                        icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        answer.classList.remove('hidden');
+                        button.setAttribute('aria-expanded', 'true');
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
         });
     </script>
 
