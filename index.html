@@ -42,17 +42,21 @@
     <meta property="article:publisher" content="https://www.instagram.com/ellierituals">
     <meta property="article:author" content="Ellie Rituals">
 
-    <!-- Google Analytics 4 - REEMPLAZA G-XXXXXXXXXX CON TU ID -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KTSGX8HH');</script>
+    <!-- End Google Tag Manager -->
+    
     <script>
+        // Helper functions para eventos de GTM
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
         
-        // Custom events para conversiones
         function trackWhatsAppClick(ritual = 'General') {
-            gtag('event', 'whatsapp_click', {
+            window.dataLayer.push({
+                'event': 'whatsapp_click',
                 'event_category': 'Contact',
                 'event_label': ritual,
                 'value': 1
@@ -60,7 +64,8 @@
         }
         
         function trackRitualView(ritualName) {
-            gtag('event', 'ritual_view', {
+            window.dataLayer.push({
+                'event': 'ritual_view',
                 'event_category': 'Engagement',
                 'event_label': ritualName,
                 'value': 1
@@ -554,6 +559,11 @@
     </script>
 </head>
 <body class="antialiased">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTSGX8HH"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="skip-to-content">Saltar al contenido principal</a>
 
@@ -834,7 +844,7 @@
                             <div class="flex items-center mb-4">
                                 <i data-lucide="user-check" class="w-6 h-6 text-accent mr-3"></i>
                                 <h3 class="text-2xl font-heading text-accent">Este Espacio es Para Ti Si...</h3>
-                            </div>
+                    </div>
                             <ul class="space-y-3 text-lg text-cream/80">
                                 <li class="flex items-start">
                                     <span class="text-accent mr-3 mt-1">✓</span>
