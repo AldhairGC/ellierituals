@@ -1370,10 +1370,17 @@
                             <span class="font-semibold text-dark-green/80">${ritual.duration}</span>
                             <span class="text-2xl font-bold text-dark-green">${ritual.cost}</span>
                         </div>
-                        <button class="btn-secondary w-full mb-3" onclick="event.stopPropagation(); openRitualModal(rituals[${index}])">Ver Detalles</button>
-                        <a href="https://wa.me/5215629137446?text=Hola,%20me%20gustaría%20agendar%20${ritual.title}%20en%20Ellie%20Rituals." target="_blank" class="btn-primary w-full" onclick="event.stopPropagation()">Agendar Ahora</a>
+                        <button class="btn-secondary w-full mb-3 ritual-detail-btn" data-ritual-index="${index}">Ver Detalles</button>
+                        <a href="https://wa.me/5215629137446?text=Hola,%20me%20gustaría%20agendar%20${encodeURIComponent(ritual.title)}%20en%20Ellie%20Rituals." target="_blank" class="btn-primary w-full" onclick="event.stopPropagation(); if(typeof trackWhatsAppClick === 'function') trackWhatsAppClick('${ritual.title}');">Agendar Ahora</a>
                     </div>
                 `;
+                
+                // Event listener para el botón "Ver Detalles"
+                card.querySelector('.ritual-detail-btn').addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    openRitualModal(ritual, index);
+                });
+                
                 card.addEventListener('click', () => openRitualModal(ritual, index));
                 ritualsContainer.appendChild(card);
                 revealObserver.observe(card);
